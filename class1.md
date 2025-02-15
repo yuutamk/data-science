@@ -1,6 +1,4 @@
-Aquí tienes el texto parafraseado y optimizado sin menciones a la siguiente clase ni a la plataforma original:  
 
----
 
 ### Introducción al Glosario de Data Science e Inteligencia Artificial  
 

@@ -95,15 +95,3 @@ La ciencia de datos sigue un flujo estructurado que abarca varias etapas clave:
 #### **Ciencia de datos vs. Inteligencia artificial**
 - **Ciencia de datos**: Aborda todo el ciclo de vida del análisis de datos, desde la recolección hasta la interpretación.
 - **Inteligencia artificial**: Se especializa en desarrollar sistemas autónomos que pueden aprender y tomar decisiones sin intervención humana.
-
----
-
-### **Conclusión**
-
-La ciencia de datos es una disciplina transformadora que convierte datos cotidianos en conocimiento estratégico. Al combinar herramientas avanzadas, metodologías estructuradas y un profundo conocimiento del negocio, los científicos de datos juegan un papel crucial en el éxito de las organizaciones modernas.
-
-Si aspiras a convertirte en un experto en este campo, plataformas educativas como Platzi ofrecen rutas de aprendizaje personalizadas para adquirir las habilidades necesarias de manera accesible y práctica.
-
---- 
-
-Espero que esta versión sea útil y completa para tu propósito. 😊

@@ -8,34 +8,45 @@ Bienvenido a este espacio donde la filosofía se fusiona con el análisis de dat
 
 El Zen de Python es un poema escrito por Tim Peters, un desarrollador de Python, que encapsula los valores fundamentales del lenguaje. Cada línea contiene sabiduría práctica para escribir programas que sean no solo funcionales, sino también elegantes y comprensibles. Para acceder a él, simplemente abre tu terminal o consola de Python y escribe:
 
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
 ```python
 import this
 ```
 
+</div>
+<br>
+
 Al ejecutarlo, verás algo similar a lo siguiente:
 
-```
-The Zen of Python, by Tim Peters
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-```
+> The Zen of Python, by Tim Peters
+  Beautiful is better than ugly.
+  Explicit is better than implicit.
+  Simple is better than complex.
+  Complex is better than complicated.
+  Flat is better than nested.
+  Sparse is better than dense.
+  Readability counts.
+  Special cases aren't special enough to break the rules.
+  Although practicality beats purity.
+  Errors should never pass silently.
+  Unless explicitly silenced.
+  In the face of ambiguity, refuse the temptation to guess.
+  There should be one-- and preferably only one --obvious way to do it.
+  Although that way may not be obvious at first unless you're Dutch.
+  Now is better than never.
+  Although never is often better than *right* now.
+  If the implementation is hard to explain, it's a bad idea.
+  If the implementation is easy to explain, it may be a good idea.
+  Namespaces are one honking great idea -- let's do more of those!
+
 
 A primera vista, estos aforismos pueden parecer abstractos, pero cada uno ofrece una valiosa lección sobre cómo abordar la programación y, en particular, la ciencia de datos.  
 
@@ -80,7 +91,6 @@ Cuando comienzas a trabajar con Python, es natural enfocarse en conceptos simple
 
 ---
 
-## Conclusión
 
 El Zen de Python es más que un conjunto de reglas: es una filosofía que te invita a buscar la claridad, la simplicidad y la elegancia en cada línea de código. Al adoptar estos principios desde el inicio de tu aventura en Python, no solo mejorarás la calidad de tu programación, sino que también te equiparás para enfrentar desafíos complejos en la ciencia de datos de manera organizada y efectiva.
 
@@ -91,7 +101,7 @@ Recuerda: cada línea de código es una oportunidad para aprender y crecer. ¡Qu
 
 ---
 
-# Explorando el Universo de los Conjuntos en Python
+# Conjuntos en Python
 
 La teoría de conjuntos es una rama de las matemáticas y de la lógica que estudia objetos llamados *conjuntos*, formados por elementos que, al agruparse, adquieren propiedades propias. Su finalidad es analizar las características de estos conjuntos y las operaciones que se pueden realizar entre ellos.
 
@@ -189,13 +199,13 @@ Aquí algunos ejemplos prácticos:
 
 
 
-<div style="background: currentColor; padding: 10px; border-radius: 8px border: 4px solid; width: fit-content; font-family: monospace; color: white;">
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px border: 4px solid; width: fit-content; font-family: monospace; color: white;">
   <div style="display: flex; gap: 6px; padding: 5px;">
     <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
     <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
     <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
   </div>
-
+<hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
 
 ```python
 # Creación de un conjunto de países
@@ -228,6 +238,7 @@ print(unique_numbers)
 ```
 
 </div>
+<br>
 
 ## Reflexiones Finales
 

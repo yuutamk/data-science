@@ -2,6 +2,8 @@
 
 En un mundo cada vez más digitalizado, donde la información fluye como un río incesante, surge una disciplina que se ha convertido en el faro que guía a las empresas hacia decisiones informadas y estrategias sólidas: la Data Science. Pero, ¿qué es realmente la Data Science? ¿Cómo funciona? Y, lo más importante, ¿cómo puede transformar tu carrera y el futuro de las organizaciones?
 
+![data science](../assets/img/datascience.png)
+
 #### La Esencia de la Data Science
 
 La Data Science es un proceso fascinante que utiliza datos para extraer información valiosa. No se trata simplemente de números y cifras; es una forma de entender el mundo a través de patrones ocultos y tendencias emergentes. Los profesionales dedicados a la Data Science son como detectives modernos, equipados con herramientas tecnológicas avanzadas para resolver los misterios que los datos plantean.
@@ -33,6 +35,7 @@ La Data Science es un campo apasionante que tiene el poder de transformar el mun
 ---
 ## ¿Para qué sirve la ciencia de datos?
 
+![data science](../assets/img/board-datascience.jpg)
 #### **El Poder Transformador de la Ciencia de Datos**
 
 En un mundo cada vez más dominado por la información, la ciencia de datos se ha convertido en una herramienta esencial para las empresas y organizaciones que buscan tomar decisiones informadas y estratégicas. Pero, ¿para qué sirve realmente la ciencia de datos? Vamos a profundizar en cómo este campo simplifica un ciclo vital en cinco puntos clave: captura de datos, almacenamiento de información, procesamiento, análisis de datos y comunicación de hallazgos.
@@ -82,6 +85,8 @@ En conclusión, la ciencia de datos sirve para transformar datos crudos en infor
 ---
 
 ### Flujo de Trabajo en un Proyecto de Ciencia de Datos: Predicción del Rendimiento Académico
+
+![panorama data science](../assets/img/proceso-datascience.png)
 
 En este curso, exploraremos cómo aplicar el flujo de trabajo estándar de la ciencia de datos para predecir el rendimiento académico de estudiantes. Utilizaremos una metodología como **CRISP-DM** (Cross-Industry Standard Process for Data Mining) y seguiremos los pasos clave para llevar a cabo este proyecto. Además, proporcionaremos una descripción detallada de cómo se ha estructurado nuestro proyecto en archivos y carpetas.
 
@@ -169,6 +174,8 @@ En resumen, siguiendo el flujo de trabajo estándar de la ciencia de datos y uti
 
 ### **¿Qué hace un científico de datos?**
 
+![panorama data science](../assets/img/panorama-datascience.jpeg)
+
 Un **científico de datos** actúa como un "chef de la información", combinando datos con ingredientes como inteligencia artificial, estadísticas y prácticas matemáticas para crear un "menú de conocimiento estratégico" para su organización. Sus funciones incluyen:
 
 - **Identificación de patrones**: Utilizar estadística y probabilidad para descubrir relaciones ocultas en los datos.
@@ -209,6 +216,8 @@ Por ejemplo, en el sector financiero, los modelos de ciencia de datos permiten d
 
 ### **Diferencias clave**
 
+![panorama data science](../assets/img/Data-Analytics-vs.-Data-science.png)
+
 #### **Ciencia de datos vs. Análisis de datos**
 - **Ciencia de datos**: Se enfoca en predecir el futuro mediante modelos avanzados y técnicas de *machine learning*.
 - **Análisis de datos**: Se centra en describir lo que ya ha ocurrido mediante el análisis retrospectivo de datos históricos.
@@ -235,6 +244,8 @@ Por ejemplo, en el sector financiero, los modelos de ciencia de datos permiten d
 
 # Entorno de Ciencia de Datos
 
+![panorama data science](../assets/img/ciencia-datos-board.jpg)
+
 La ciencia de datos es un universo en constante expansión, y elegir el lugar adecuado para comenzar a programar es el primer paso para convertirte en un verdadero explorador de datos. En este blog descubrirás desde la elección de la plataforma ideal hasta la configuración de ambientes virtuales para garantizar que cada proyecto tenga su propio espacio seguro y personalizado. 
 
 ---
@@ -252,6 +263,9 @@ Esta decisión es crucial, ya que define la base sobre la que construirás tus p
 
 ## Herramientas Esenciales para tu Viaje en Ciencia de Datos
 
+
+![panorama data science](../assets/img/programing.jpg)
+
 ### Editores y Entornos de Programación
 
 - **VSCode:** Un editor ágil, extensible y multilenguaje.  
@@ -261,6 +275,8 @@ Esta decisión es crucial, ya que define la base sobre la que construirás tus p
 
 ### Plataformas en la Nube
 
+![panorama data science](../assets/img/computacion-en-la-nube.jpg)
+
 - **Google Colab:** Permite ejecutar notebooks sin necesidad de configuración local, con acceso gratuito a GPUs/TPUs.  
 - **Gradient (Paperspace):** Perfecto para entrenar modelos de gran escala sin preocuparte por las limitaciones de hardware.
 
@@ -269,6 +285,9 @@ Estas herramientas no solo te ayudarán a escribir y probar código, sino que ta
 ---
 
 ## Notebooks vs Scripts: ¿Cuál es tu Aliado?
+
+
+![panorama data science](../assets/img/notebook-vs-script.jpg)
 
 Mientras que los **notebooks** son ideales para la experimentación, prototipado y visualización en tiempo real, los **scripts** ofrecen una solución directa y automatizada para tareas repetitivas y despliegue de modelos.  
 > **Tip:** Comienza tu proceso en un notebook para explorar y validar ideas, y cuando estés seguro del funcionamiento, migra a un script para optimizar y automatizar tu flujo de trabajo.
@@ -299,6 +318,8 @@ La evolución de los notebooks ha sido impresionante: desde los inicios en los 1
 
 ## Primeros Pasos en la Nube: Google Colab y Deepnote
 
+![panorama data science](../assets/img/google-colab.png)
+
 ### Google Colab
 - **Ventajas:** No requiere instalaciones locales, acceso a recursos computacionales gratuitos y una integración perfecta con Google Drive.  
 - **Cómo empezar:**  
@@ -307,12 +328,18 @@ La evolución de los notebooks ha sido impresionante: desde los inicios en los 1
   3. Utiliza celdas de código y de texto (Markdown) para documentar cada paso.  
 
 ### Deepnote
+
+![panorama data science](../assets/img/DeepNote.png)
+
 - **Características adicionales:** Gestión de proyectos a nivel colaborativo, terminal integrada, previsualización de archivos CSV y más.
 - **Ideal para:** Proyectos en equipo donde la colaboración y la integración de múltiples herramientas son clave. 
 
 ---
 
 ## Configuración del Entorno de Trabajo con Ambientes Virtuales
+
+
+![panorama data science](../assets/img/entornos-virtuales.png)
 
 Trabajar en ciencia de datos implica manejar múltiples proyectos con diversas dependencias. Para evitar conflictos, es fundamental crear ambientes virtuales que permitan aislar cada proyecto.
 

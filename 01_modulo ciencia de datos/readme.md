@@ -507,6 +507,934 @@ Google Colab es mucho más que un simple cuaderno de Jupyter en la nube; es una 
 
 ---
 
+
+# instalaciones de otras herramientas
+
+
+## VSCode
+
+Aqui encontraras el tutorial paso a paso para instalar VSCode en tu sistema operativo
+
+
+
+
+
+**🚀 Instala VSCode en Windows, Linux y Mac (¡Sin Morir en el Intento!) 🌟**  
+
+**Visual Studio Code (VSCode)** es como el *Swiss Army Knife* de los programadores: ligero, personalizable y con extensiones para todo. En este tutorial, te guiaré paso a paso para instalarlo en **Windows, Linux y Mac**. ¡Vamos!  
+
+---
+
+### **🎮 Paso 1: Elige Tu Sistema Operativo**  
+*¿Eres team Windows, un rebelde de Linux o un artista de Mac? Salta directamente a tu sección.*  
+
+---
+
+## **🪟 Windows: Instalación en 3 Clicks (¡O Casi!)**  
+
+1. **Descarga el Instalador**  
+   🌐 Visita [code.visualstudio.com](https://code.visualstudio.com/) y haz clic en el botón **"Download for Windows"** (se descargará un `.exe`).  
+
+2. **Ejecuta el Instalador**  
+   - Doble clic en el archivo descargado.  
+   - **Sí, acepto los términos** (¡no hay que ser rebelde aquí!).  
+   - En *Opciones Adicionales*:  
+     ✅ Marca **"Añadir a PATH"** (para abrir VSCode desde la terminal).  
+     ✅ Crea un icono en el escritorio (¡para acceso rápido!).  
+
+3. **¡Listo!**  
+   Abre VSCode desde el menú de inicio y… ¡boom! Verás la pantalla de bienvenida.  
+
+**💡 Pro Tip**: En la terminal, escribe `code .` para abrir VSCode en la carpeta actual.  
+
+Video tutorial 👇👇👇👇👇👇👇
+
+[![INSTALAR Y CONFIGURAR VISUAL STUDIO CODE EN WINDOWS](https://img.youtube.com/vi/X_Z7d04x9-E/maxresdefault.jpg)](https://www.youtube.com/watch?v=X_Z7d04x9-E)
+
+---
+
+## **🍎 Mac: Instalación con Estilo**  
+
+**Método 1: Descarga Directa**  
+1. 🌐 Ve a [code.visualstudio.com](https://code.visualstudio.com/) y pulsa **"Download for Mac"** (se descargará un archivo `.zip`).  
+2. **Extrae el .zip** y arrastra `Visual Studio Code.app` a la carpeta **Aplicaciones**.  
+3. **Ejecútalo** desde *Launchpad* o *Spotlight* (⌘ + espacio y escribe "VSCode").  
+
+**Método 2: Homebrew (Para Devs Pro)**  
+1. Si tienes Homebrew instalado, abre la terminal y escribe:  
+   ```bash  
+   brew install --cask visual-studio-code  
+   ```  
+2. ¡Homebrew hará el resto!  
+
+**⚠️ Nota**: Si macOS te bloquea, ve a *Preferencias del Sistema → Seguridad y Privacidad → Permite VSCode*.  
+
+Video tutorial 👇👇👇👇👇👇👇
+
+[![Miniatura del video](https://img.youtube.com/vi/mU3wQfU26_A/maxresdefault.jpg)](https://www.youtube.com/watch?v=mU3wQfU26_A)
+
+
+
+---
+
+## **🐧 Linux: Para Hackers de Terminal**  
+
+**Método 1: .deb o .rpm (Ubuntu, Fedora, etc.)**  
+1. Descarga el paquete desde [code.visualstudio.com](https://code.visualstudio.com/).  
+   - **.deb** para Debian/Ubuntu.  
+   - **.rpm** para Fedora/Red Hat.  
+2. Instala desde la terminal:  
+   ```bash  
+   # Debian/Ubuntu  
+   sudo dpkg -i ~/Descargas/code_*.deb  
+   sudo apt install -f  # Si hay dependencias faltantes  
+
+   # Fedora/Red Hat  
+   sudo rpm -i ~/Descargas/code_*.rpm  
+   ```  
+
+**Método 2: Repositorio Oficial (Actualizaciones Automáticas)**  
+```bash  
+# Agrega la clave GPG  
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg  
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/  
+
+# Añade el repositorio  
+echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list  
+
+# Instala VSCode  
+sudo apt update  
+sudo apt install code  
+```  
+
+**Método 3: Snap (Para los que Aman lo Simple)**  
+```bash  
+sudo snap install --classic code  
+```  
+
+**🎉 Verificación**: ¡Ejecuta `code` en la terminal o búscalo en tus aplicaciones!  
+
+
+Video tutorial 👇👇👇👇👇👇👇
+
+[![Miniatura del video](https://img.youtube.com/vi/g1kqDhq5Xxc/maxresdefault.jpg)](https://www.youtube.com/watch?v=g1kqDhq5Xxc)
+
+
+
+
+
+---
+
+### **✨ Paso Final: Personaliza Tu VSCode**  
+Ahora que lo tienes instalado:  
+1. Abre la pestaña **Extensiones** (Ctrl+Shift+X / ⌘+Shift+X).  
+2. Instala temas, soporte para Python, JavaScript... ¡lo que necesites!  
+3. **Pro Tip**: Prueba el tema *"Night Owl"* para programar de madrugada sin quemarte los ojos.  
+
+---
+
+### **🚀 ¡A Codear!**  
+Ya seas un *Windows Warrior*, un *Mac Maestro* o un *Linux Legend*, VSCode está listo para ser tu compañero de código. ¿Qué esperas? ¡Instala, personaliza y domina el editor!  
+
+¿Te sirvió el tutorial? **¡Comparte y sígueme para más guías creativas!** 🚀  
+
+---
+
+# La terminal
+
+Si alguna vez viste una película de hackers, seguro has visto la ventana negra que abren en sus computadoras, donde escriben muchas letras sin sentido. Esto se conoce como terminal, pero te lo explicaremos con más detalle.
+
+# Introducción a la Línea de Comandos
+
+## ¿Qué es la terminal?
+La terminal es un programa que ejecuta líneas de comandos, que a su vez realizan acciones en el sistema. Para entender mejor este concepto, es importante conocer dos términos clave: **terminal** y **shell**.
+
+### Concepto de terminal
+Estamos muy acostumbrados a utilizar sistemas operativos con una interfaz gráfica donde podemos abrir carpetas, ejecutar programas y mover archivos con el ratón. Sin embargo, la terminal es otra forma de interactuar con la computadora.
+
+La terminal es una ventana más, un programa que recibe comandos y los pasa a la shell para su ejecución. Con ella, podemos hacer todo lo que permite la interfaz gráfica del sistema operativo, pero usando texto y comandos.
+
+**Te explicamos: qué es un comando.**
+
+### Concepto de shell
+La terminal no ejecuta directamente las líneas de código, solo las recibe. Quien realmente las ejecuta es la **shell**. Este programa toma el comando, lo interpreta y lo envía al procesador y la memoria RAM para que se ejecute.
+
+Podemos verlo de esta manera: la shell nos permite comunicarnos con el procesador y la RAM sin necesidad de usar la interfaz gráfica del sistema operativo.
+
+## ¿Por qué usar la shell en lugar de la interfaz gráfica?
+
+Al final del día, la interfaz gráfica es solo un programa más que ocupa espacio en la memoria RAM y usa recursos del procesador. Por ejemplo, en Windows 10, si abres el Administrador de Tareas y vas a la pestaña **Procesos**, en el grupo **Procesos de Windows**, encontrarás un proceso llamado **Explorador de Windows**.
+
+![Administrador de tareas](../assets/img/webp/administrador-de-tareas.webp)
+
+Este programa gestiona el sistema de archivos y parte de la interfaz gráfica del sistema operativo. Como se puede ver, consume CPU y memoria RAM.
+
+En cambio, la terminal es mucho más ligera, ya que te permite comunicarte directamente con los recursos del sistema operativo sin necesidad de una interfaz gráfica. Además, en algunas situaciones podrías no contar con una interfaz gráfica (por ejemplo, en servidores) o esta podría fallar, obligándote a usar la terminal de comandos para resolver problemas.
+
+## Requisitos para este curso
+Para seguir este curso, necesitarás un sistema operativo basado en **Linux** o instalar **Windows Subsystem for Linux (WSL)** en Windows.
+
+# WSL
+
+
+
+# 🚀 Guía Completa para Instalar WSL en Windows y Disfrutar de Linux en tu PC
+
+¿Alguna vez has querido combinar la potencia de Linux con la comodidad de Windows? Con el **Subsistema de Windows para Linux (WSL)**, puedes ejecutar un entorno Linux directamente en tu sistema sin necesidad de máquinas virtuales. Sigue esta guía paso a paso para instalarlo y configurarlo correctamente.
+
+
+[![Miniatura del video](https://img.youtube.com/vi/Qy44XLpiChc/maxresdefault.jpg)](https://www.youtube.com/watch?v=Qy44XLpiChc)
+
+---
+
+## 📌 ¿Qué es WSL?
+
+WSL es una capa de compatibilidad que permite ejecutar Linux en Windows sin necesidad de una máquina virtual. Con WSL puedes:
+- Usar herramientas como `bash`, `git`, `python`, entre otras.
+- Ejecutar aplicaciones Linux dentro de Windows.
+- Integrar Windows y Linux en un solo entorno de trabajo.
+
+WSL tiene dos versiones:
+- **WSL 1**: Ofrece un acceso rápido a los archivos de Windows.
+- **WSL 2**: Mejor compatibilidad y rendimiento. Recomendado.
+
+Para verificar tu versión, usa:
+```powershell
+wsl -l -v
+```
+
+---
+
+## ✅ Requisitos Previos
+
+Antes de comenzar, asegúrate de lo siguiente:
+- **Sistema Operativo:** Tener **Windows 10 (versión 2004 o superior)** o **Windows 11**.
+- **Virtualización:** Verifica que la virtualización esté habilitada en la BIOS/UEFI de tu PC.
+- **Características de Windows:** Asegúrate de que las siguientes características estén activadas:
+  - **Subsistema de Windows para Linux (WSL)**
+  - **Plataforma de Máquina Virtual**
+
+Para verificar la versión de Windows:
+1. Presiona `Windows + R`, escribe `winver` y presiona Enter.
+2. Confirma que tu versión sea compatible.
+
+---
+
+## 🛠️ Instalación de WSL
+
+### **Opción 1: Instalación Automática**
+
+Si tienes Windows actualizado y las características necesarias habilitadas, puedes instalar WSL con un solo comando:
+```powershell
+wsl --install
+```
+Este comando habilitará WSL, activará las características necesarias y descargará Ubuntu como distribución predeterminada.
+
+### **Opción 2: Instalación Manual**
+
+Si la opción automática no funciona, sigue estos pasos:
+1. Abre **PowerShell como Administrador**.
+2. Ejecuta los siguientes comandos para habilitar las características de Windows:
+   ```powershell
+   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+   ```
+3. Reinicia tu computadora cuando se te solicite.
+
+---
+
+## 🔄 Actualización del Kernel de Linux
+
+Para que WSL 2 funcione correctamente, es recomendable actualizar el kernel de Linux:
+1. Descarga la actualización desde [Microsoft](https://aka.ms/wsl2kernel).
+2. Instálala siguiendo las instrucciones.
+3. Reinicia tu computadora.
+
+Para establecer **WSL 2 como versión predeterminada**, usa:
+```powershell
+wsl --set-default-version 2
+```
+
+---
+
+## 🐧 Instalación de una Distribución Linux
+
+1. Abre la **Microsoft Store** y busca “Linux”.
+2. Selecciona tu distribución favorita:
+   - **Ubuntu** (Recomendada para principiantes).
+   - **Debian** (Ligero y estable).
+   - **Kali Linux** (Para pruebas de seguridad y hacking ético).
+3. Haz clic en **Instalar** y espera a que se complete la instalación.
+
+---
+
+## ⚙️ Configuración Inicial de Linux
+
+Después de instalar tu distribución, ábrela desde el menú de Inicio y sigue estos pasos:
+1. Crea un **nombre de usuario** y una **contraseña**.
+2. Una vez configurado, tendrás acceso a la terminal de Linux dentro de Windows.
+
+Para actualizar los paquetes de tu distribución, usa:
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+---
+
+## 🎨 Personalización y Herramientas Útiles
+
+### **📦 Instalación de herramientas esenciales**
+
+- **Git**: Control de versiones  
+  ```bash
+  sudo apt install git
+  ```
+- **Python**: Desarrollo en Python  
+  ```bash
+  sudo apt install python3
+  ```
+- **Node.js**: Desarrollo web  
+  ```bash
+  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  ```
+
+### **🖥️ Integración con VS Code**
+
+Para una mejor experiencia de desarrollo, instala la extensión **Remote - WSL** en Visual Studio Code y utiliza:
+```bash
+code .
+```
+
+### **📂 Acceder a los Archivos de Windows**
+
+Puedes acceder a tus archivos de Windows desde WSL en:
+```bash
+cd /mnt/c/
+```
+
+### **🔄 Apagar WSL**
+
+Si necesitas detener WSL, usa:
+```powershell
+wsl --shutdown
+```
+
+---
+
+## 🚀 ¡Comienza tu Aventura en Linux desde Windows!
+
+¡Felicidades! 🎉 Ahora tienes WSL instalado y listo para usar. Puedes desarrollar software, aprender Linux o experimentar con herramientas avanzadas sin salir de Windows.
+
+
+🌟 ¡Explora, crea y diviértete en el mundo de Linux dentro de Windows!
+
+---
+
+
+
+# primeros comandos bash
+
+## ¡El Poder de la Línea de Comando!
+
+En los sistemas operativos, los archivos se organizan en una estructura de carpetas similar a un árbol jerárquico. En Linux, esta estructura es sencilla y elegante. La **carpeta raíz** se representa con el símbolo `/`, que es el punto de partida de todo el sistema de ficheros (en Windows sería similar a `C:\`). Dentro de `/`, encontrarás varias carpetas esenciales, entre ellas **Home**.
+
+La carpeta **Home** contiene un directorio para cada usuario, y en cada uno de estos directorios se guardan tus archivos personales como imágenes, documentos, música, etc.
+
+![Sistema raiz](../assets/img/webp/pltz/image(60).webp)
+
+---
+
+## Conociendo la Terminal
+
+Cuando abres la terminal, probablemente veas algo como esto:
+
+```
+miguelangel@DESKTOP-3R804MK:~$
+```
+
+Aunque parezca un código secreto, cada parte tiene un significado:
+- **miguelangel**: Es el nombre del usuario activo.
+- **DESKTOP-3R804MK**: Es el nombre que se le asignó a tu computadora.
+- **~**: Indica que estás en el directorio **Home** de tu usuario.
+- **$**: Significa que estás utilizando una cuenta de usuario normal, no de superusuario (root).
+
+---
+
+## Tus Primeros Comandos Bash
+
+### 1. Descubre Dónde Estás: `pwd`
+
+El comando `pwd` (Print Working Directory) te muestra en qué directorio te encuentras actualmente. Escríbelo en la terminal:
+
+```bash
+pwd
+```
+
+La salida típica será algo así:
+
+```
+/home/miguelangel
+```
+
+Esto te confirma que estás en el directorio **Home** de tu usuario.
+
+### 2. Muévete Entre Carpetas: `cd`
+
+Para cambiar de directorio, utiliza el comando `cd` (Change Directory). Por ejemplo, para entrar en la carpeta **Documents** dentro de tu Home, escribe:
+
+```bash
+cd Documents
+```
+
+El prompt de tu terminal cambiará para reflejar la nueva ubicación:
+
+```
+miguelangel@DESKTOP-3R804MK:~/Documents$
+```
+
+### 3. Atajos Esenciales
+
+#### Virgulilla (`~`)
+
+La virgulilla `~` es un atajo que representa tu directorio **Home**. Si te encuentras en un camino complejo y deseas volver a tu Home, simplemente escribe:
+
+```bash
+cd ~
+```
+
+#### Punto (`.`) y Doble Punto (`..`)
+
+- **Punto (`.`):** Representa el directorio actual.
+- **Doble Punto (`..`):** Te lleva al directorio superior. Por ejemplo, si estás en `/home/miguelangel/Documents` y deseas volver a `/home/miguelangel`, escribe:
+  
+  ```bash
+  cd ..
+  ```
+
+#### Slash (`/`)
+
+El slash `/` te lleva a la raíz del sistema, permitiéndote navegar a cualquier carpeta comenzando desde el inicio.
+
+---
+
+## Explorando el Contenido con `ls`
+
+El comando `ls` (List) te permite ver los archivos y carpetas que hay en el directorio en el que te encuentras:
+
+```bash
+ls
+```
+
+Cada nombre puede aparecer en distintos colores, por ejemplo, azul para carpetas y otro color para archivos, dependiendo de la configuración de tu terminal.
+
+![Comando ls](../assets/img/webp/pltz/image(61).webp)
+
+### Opciones Adicionales: `ls -l` y `ls -lh`
+
+- **`ls -l`:** Muestra la lista en formato largo, proporcionando detalles como permisos, tamaño y fecha de modificación.
+
+  ![Comando ls -l](../assets/img/webp/pltz/image(63).webp)
+
+- **`ls -lh`:** Agrega la opción "human readable" para que el tamaño se muestre en KB, MB, etc.
+
+  ![Comando ls -lh](../assets/img/webp/pltz/Sintítulo(1).webp)
+
+---
+
+## Identifica Archivos con `file`
+
+A veces necesitas saber qué tipo de elemento es un archivo o carpeta. El comando `file` te ofrece esta información. Por ejemplo:
+
+```bash
+file lib
+```
+
+La salida te indicará si se trata de un directorio, un enlace simbólico, etc.
+
+![Comando file lib](../assets/img/webp/pltz/image(64).webp)
+
+---
+
+## Tabla Resumen de Comandos
+
+| Comando | Función |
+| --- | --- |
+| **pwd** | Muestra el directorio en el que te encuentras. |
+| **cd** | Cambia de directorio. |
+| **ls** | Lista los archivos y carpetas del directorio actual. |
+| **file** | Muestra información sobre el tipo de archivo seleccionado. |
+
+---
+
+## Recursos Adicionales
+
+Para profundizar en la **estructura de directorios en Linux**, te recomiendo leer este artículo: [Estructura de Directorios en Linux](https://www.geeksforgeeks.org/linux-file-hierarchy-structure/).
+
+---
+
+¡Y ahí lo tienes! Con estos comandos básicos ya puedes empezar a explorar y dominar la línea de comando en Linux. No solo es una herramienta poderosa para el desarrollo y la administración de sistemas, sino también una puerta de entrada a un universo lleno de posibilidades. Experimenta, navega y, sobre todo, ¡disfruta del viaje!
+
+
+---
+
+
+
+# ¡Conviértete en un Ninja de la Terminal! Manipula Archivos como un Pro
+
+Una vez que ya sabes moverte entre carpetas y listar su contenido, ¡es hora de darle vida a tus archivos! En esta aventura, aprenderás a crear, copiar, mover y eliminar archivos y directorios usando comandos Bash. Prepárate para desatar el poder de la línea de comando.
+
+---
+
+## Crea Directorios con `mkdir`
+
+El comando `mkdir` (Make Directory) te permite crear nuevas carpetas de manera rápida. Solo tienes que escribir el comando seguido del nombre del directorio que deseas crear. Por ejemplo:
+
+```bash
+mkdir DirectorioInteresante
+```
+
+¿Y si quieres crear varios directorios a la vez? Es muy sencillo:
+
+```bash
+mkdir DirectorioInteresante SecretosDeEstado
+```
+
+![Comando mkdir DirectorioInteresante SecretosDeEstado](../assets/img/webp/pltz/image(65).webp)
+
+---
+
+## Crea Archivos con `touch`
+
+¿Necesitas crear archivos en un instante? El comando `touch` es tu aliado. Funciona de forma similar a `mkdir`: simplemente escribe el comando seguido del nombre del archivo que deseas generar. Por ejemplo:
+
+```bash
+touch Secreto1 Secreto2 SecretoSecretario
+```
+
+![Comando touch Secreto1 Secreto2 SecretoSecretario](../assets/img/webp/pltz/image(66).webp)
+
+---
+
+## Copia Archivos con `cp`
+
+Para hacer una copia de un archivo, utiliza el comando `cp` (Copy). La sintaxis es muy simple: primero, el archivo que deseas copiar y luego el nombre para la copia. Mira este ejemplo:
+
+```bash
+cp Secreto1 Secreto_bk
+```
+
+![Comando cp Secreto1 Secreto_bk](../assets/img/webp/pltz/Sin-título(2).webp)
+
+---
+
+## Mueve Archivos o Directorios con `mv`
+
+Si necesitas mover un archivo o directorio a otra ubicación, el comando `mv` (Move) es la herramienta perfecta. La sintaxis es similar a la de copiar: primero, el archivo que deseas mover, y luego la ruta de destino. Por ejemplo:
+
+```bash
+mv SecretoQueSeHizoPublico ../SecretosPublicos/
+```
+
+![Comando mv SecretoQueSeHizoPublico ../SecretosPublicos/](../assets/img/webp/pltz/Sin-título(3).webp)
+
+---
+
+## Elimina Archivos con `rm`
+
+Finalmente, si quieres eliminar archivos, el comando `rm` (Remove) te permitirá hacerlo de manera sencilla. Solo escribe el comando seguido del nombre del archivo que deseas borrar:
+
+```bash
+rm SecretoQueNadieDebeVer
+```
+
+![Comando rm SecretoQueNadieDebeVer](../assets/img/webp/pltz/image(69).webp)
+
+### Opciones Poderosas de `rm`
+
+El comando `rm` tiene varias opciones útiles:
+- **`-i` (interactive):** Te pregunta si estás seguro de eliminar el archivo.
+- **`-r` (recursive):** Elimina recursivamente todo lo que haya dentro de un directorio.
+- **`-f` (force):** Fuerza la eliminación incluso si el archivo está en uso.
+
+Mira este ejemplo en la terminal:
+
+![Comando rm SecretoQueNadieDebeVer](../assets/img/webp/pltz/image(70).webp)
+
+---
+
+## Tabla Resumen de Comandos
+
+| Comando | Función |
+| --- | --- |
+| **mkdir** | Make Directory: Crea carpetas |
+| **touch** | Crea archivos |
+| **cp** | Copy: Copia archivos |
+| **mv** | Move: Mueve archivos o directorios |
+| **rm** | Remove: Elimina archivos o carpetas |
+
+---
+
+¡Y ahí lo tienes! Con estos comandos básicos, ya estás listo para manipular archivos y directorios como un verdadero experto en la terminal. Experimenta, crea y, sobre todo, ¡diviértete explorando el mundo de Bash!
+
+¿Estás listo para el siguiente nivel? Sigue practicando y pronto dominarás el arte de la línea de comando. 
+
+
+
+---
+
+
+# ¡Explora el Universo de la Visualización de Archivos en la Terminal!
+
+Cuando ya dominas cómo moverte entre carpetas y listar sus contenidos, es hora de aprender a ver qué hay dentro de tus archivos. En esta guia, descubrirás cómo utilizar comandos esenciales para inspeccionar, abrir y explorar el contenido de documentos y directorios desde la línea de comando. ¡Prepárate para sentirte como un auténtico hacker digital!
+
+---
+
+## Vistazo Rápido con `head` y `tail`
+
+¿Quieres ver solo un fragmento de un archivo? Los comandos **head** y **tail** son tus aliados:
+
+- **`head`**: Imprime las primeras 10 líneas de un archivo.
+- **`tail`**: Muestra las últimas 10 líneas.
+
+La sintaxis es muy sencilla: coloca el nombre del archivo detrás del comando y listo.
+
+![Head y Tail](../assets/img/webp/pltz/image(71).webp)
+
+Aquí puedes ver cómo se inspecciona un documento HTML, mostrando tanto las primeras como las últimas líneas.
+
+Si deseas ver más líneas, por ejemplo, las primeras 20, simplemente usa la opción `-n` seguida del número deseado:
+
+```bash
+head proyecto.html -n 20
+```
+
+![Head con -n 20](../assets/img/webp/pltz/image(72).webp)
+
+---
+
+## Visualiza el Documento Entero con `less`
+
+¿Necesitas revisar todo el contenido de un archivo? El comando **less** es perfecto para ello. Escribe:
+
+```bash
+less [nombreDelArchivoParaAbrir]
+```
+
+![Usando less](../assets/img/webp/pltz/image(73).webp)
+
+Con **less**, se abrirá una interfaz interactiva en la terminal donde puedes desplazarte usando las flechas o el scroll. Además, si presionas la tecla slash (`/`), podrás buscar palabras específicas dentro del documento. Solo escribe la palabra y presiona Enter. Para salir de esta interfaz, simplemente presiona **q**.
+
+![Buscando con less](../assets/img/webp/pltz/image(74).webp)
+
+---
+
+## Abre Archivos con `xdg-open`
+
+A veces, prefieres ver tus archivos en un programa gráfico. Aquí es donde **xdg-open** entra en acción: abre el archivo en el programa predeterminado para su extensión. Por ejemplo, si abres un documento HTML, se lanzará el editor predeterminado para ese tipo de archivos.
+
+Pero, ¿qué pasa si recibes un error? Es posible que veas un mensaje como este:
+
+![Error con xdg-open](../assets/img/webp/pltz/image(75).webp)
+
+El error te indica:  
+*"Comando 'xdg-open' no encontrado, pero puede ser instalado con: sudo apt install xdg-utils"*.  
+La solución es sencilla: sigue la recomendación del mensaje y ejecuta el comando para instalar el paquete necesario.
+
+![Instalación de xdg-open](../assets/img/webp/pltz/image(76).webp)
+
+Una vez instalado, puedes abrir cualquier archivo con:
+
+```bash
+xdg-open [archivoParaAbrir]
+```
+
+Si abres un archivo HTML sin un programa predeterminado, podría abrirse en una interfaz similar a **less**; sin embargo, al abrir un PDF, verás la interfaz del lector de PDF.
+
+![Abrir PDF con xdg-open](../assets/img/webp/pltz/image(77).webp)
+
+---
+
+## Explora Carpetas con `nautilus`
+
+¿Sabías que también puedes abrir carpetas en una interfaz gráfica desde la terminal? Con **nautilus**, el explorador de archivos de GNOME, podrás hacerlo de manera sencilla:
+
+```bash
+nautilus [ruta_de_la_carpeta]
+```
+
+Esto te permitirá navegar visualmente por tus directorios, como si estuvieras usando una ventana normal del sistema operativo.
+
+---
+
+## Tabla Resumen de Comandos
+
+| Comando    | Función                                                    |
+| ---------- | ---------------------------------------------------------- |
+| **head**   | Muestra las primeras 10 líneas de un archivo.             |
+| **tail**   | Muestra las últimas 10 líneas de un archivo.              |
+| **less**   | Permite ver todo el contenido de un archivo de forma interactiva. |
+| **xdg-open** | Abre un archivo en el programa predeterminado para su extensión. |
+| **nautilus** | Abre una carpeta en la interfaz gráfica de ventanas.      |
+
+---
+
+¡Y ahí lo tienes! Con estos comandos, puedes inspeccionar y explorar el contenido de tus archivos y directorios como un verdadero experto en la terminal. Sigue practicando y pronto dominarás el arte de visualizar y manipular la información en Linux. 
+
+¡Sigue explorando y conviértete en el maestro de la línea de comando!
+
+
+# ¡Domina el Arte de los Comandos y Wildcards en la Terminal!
+
+¡Bienvenido, intrépido explorador digital! En este viaje nos adentraremos en el lenguaje secreto de la línea de comando, donde cada instrucción es una orden directa a tu ordenador. Descubre cómo funcionan los comandos, qué significan y cómo usar wildcards para encontrar patrones en tus archivos y directorios. Prepárate para convertirte en un verdadero maestro de la terminal.
+
+---
+
+## ¿Qué es un Comando?
+
+Un **comando** es un mensaje enviado al ordenador que provoca una respuesta; es una orden que le indica al sistema qué acción debe ejecutar. Cada sistema operativo incluye un conjunto de comandos básicos que te permiten realizar tareas simples de forma directa. En sistemas basados en **UNIX**, los comandos son la clave para interactuar con el entorno.
+
+Un comando puede significar cuatro cosas:
+- **Un programa ejecutable.**
+- **Un comando de utilidad de la shell:** Es un programa que tiene funciones específicas, como `cd`.
+- **Una función de shell:** Son funciones definidas en la shell, por ejemplo, `mkdir`.
+- **Un alias:** Una forma abreviada de un comando, como `ls`.
+
+![¿Qué es un comando?](../assets/img/webp/pltz/que-es-un-comando.webp)
+
+---
+
+## Ejemplos de Comandos Básicos en la Terminal
+
+Aquí te presentamos algunos comandos esenciales que te ayudarán a explorar y personalizar tu experiencia en la terminal:
+
+- **`type <comando>`:** Conoce qué tipo de comando es (ejemplo: `type ls`).
+- **`alias l="<secuencia de comandos>"`:** Crea un alias temporal para un comando. Por ejemplo, para definir `l` como un atajo para `ls -lh`:
+  ```bash
+  alias l="ls -lh"
+  ```
+  Nota: Los alias se pierden al cerrar la terminal.
+- **`help <comando>`:** Muestra una breve ayuda sobre el comando.
+- **`man <comando>`:** Abre el manual completo del comando.
+- **`info <comando>`:** Proporciona información resumida en otro formato.
+- **`whatis <comando>`:** Describe el comando en una sola línea (por ejemplo, `whatis ls`).
+
+Con estos comandos, no solo descubres qué hace cada instrucción, sino que también aprendes a crear tus propios atajos para agilizar tu trabajo.
+
+---
+
+## Wildcards: Los Comodines del Mundo Digital
+
+Las **wildcards** o comodines son caracteres especiales que te permiten buscar patrones en nombres de archivos y directorios. Son especialmente útiles cuando trabajas con comandos de manipulación de archivos como `mv`, `cp` y `rm`.
+
+### Buscar Todo: El Asterisco (*)
+
+El asterisco te ayuda a seleccionar todos los archivos que cumplan con un patrón. Por ejemplo, para listar todos los archivos con extensión `.png`:
+```bash
+ls -l *.png
+```
+
+![Buscar archivos .png](../assets/img/webp/pltz/image(185).webp)
+
+También puedes colocarlo al final para buscar archivos que comiencen con ciertos caracteres. Por ejemplo, para buscar archivos que comiencen por "fotoDe":
+```bash
+ls -l fotoDe*
+```
+
+![Archivos que comienzan por "fotoDe"](../assets/img/webp/pltz/image(186).webp)
+
+### Buscar por Cantidad Exacta de Caracteres: El Signo de Interrogación (?)
+
+El signo de interrogación `?` te permite sustituir un único carácter. Por ejemplo, para buscar archivos como "foto1.png", "foto2.png", etc.:
+```bash
+ls -l foto?.png 
+```
+# ¡Domina el Arte de los Comandos y Wildcards en la Terminal!
+
+¡Bienvenido, intrépido explorador digital! En este viaje nos adentraremos en el lenguaje secreto de la línea de comando, donde cada instrucción es una orden directa a tu ordenador. Descubre cómo funcionan los comandos, qué significan y cómo usar wildcards para encontrar patrones en tus archivos y directorios. Prepárate para convertirte en un verdadero maestro de la terminal.
+
+---
+
+## ¿Qué es un Comando?
+
+Un **comando** es un mensaje enviado al ordenador que provoca una respuesta; es una orden que le indica al sistema qué acción debe ejecutar. Cada sistema operativo incluye un conjunto de comandos básicos que te permiten realizar tareas simples de forma directa. En sistemas basados en **UNIX**, los comandos son la clave para interactuar con el entorno.
+
+Un comando puede significar cuatro cosas:
+- **Un programa ejecutable.**
+- **Un comando de utilidad de la shell:** Es un programa que tiene funciones específicas, como `cd`.
+- **Una función de shell:** Son funciones definidas en la shell, por ejemplo, `mkdir`.
+- **Un alias:** Una forma abreviada de un comando, como `ls`.
+
+![¿Qué es un comando?](../assets/img/webp/pltz/que-es-un-comando.webp)
+
+---
+
+## Ejemplos de Comandos Básicos en la Terminal
+
+Aquí te presentamos algunos comandos esenciales que te ayudarán a explorar y personalizar tu experiencia en la terminal:
+
+- **`type <comando>`:** Conoce qué tipo de comando es (ejemplo: `type ls`).
+- **`alias l="<secuencia de comandos>"`:** Crea un alias temporal para un comando. Por ejemplo, para definir `l` como un atajo para `ls -lh`:
+  ```bash
+  alias l="ls -lh"
+  ```
+  Nota: Los alias se pierden al cerrar la terminal.
+- **`help <comando>`:** Muestra una breve ayuda sobre el comando.
+- **`man <comando>`:** Abre el manual completo del comando.
+- **`info <comando>`:** Proporciona información resumida en otro formato.
+- **`whatis <comando>`:** Describe el comando en una sola línea (por ejemplo, `whatis ls`).
+
+Con estos comandos, no solo descubres qué hace cada instrucción, sino que también aprendes a crear tus propios atajos para agilizar tu trabajo.
+
+---
+
+## Wildcards: Los Comodines del Mundo Digital
+
+Las **wildcards** o comodines son caracteres especiales que te permiten buscar patrones en nombres de archivos y directorios. Son especialmente útiles cuando trabajas con comandos de manipulación de archivos como `mv`, `cp` y `rm`.
+
+### Buscar Todo: El Asterisco (*)
+
+El asterisco te ayuda a seleccionar todos los archivos que cumplan con un patrón. Por ejemplo, para listar todos los archivos con extensión `.png`:
+```bash
+ls -l *.png
+```
+
+![Buscar archivos .png](../assets/img/webp/pltz/image(185).webp)
+
+También puedes colocarlo al final para buscar archivos que comiencen con ciertos caracteres. Por ejemplo, para buscar archivos que comiencen por "fotoDe":
+```bash
+ls -l fotoDe*
+```
+
+![Archivos que comienzan por "fotoDe"](../assets/img/webp/pltz/image(186).webp)
+
+### Buscar por Cantidad Exacta de Caracteres: El Signo de Interrogación (?)
+
+El signo de interrogación `?` te permite sustituir un único carácter. Por ejemplo, para buscar archivos como "foto1.png", "foto2.png", etc.:
+```bash
+ls -l foto?.png
+```
+
+![Buscar archivos con un solo carácter](../assets/img/webp/pltz/image(187).webp)
+
+Si sabes que el nombre tiene dos dígitos, utiliza dos signos de interrogación:
+```bash
+ls -l foto??.jpg
+```
+
+![Buscar archivos con dos caracteres](../assets/img/webp/pltz/image(189).webp)
+
+También puedes combinar wildcards para mayor flexibilidad:
+```bash
+ls -l foto?.*
+```
+
+![Buscar archivos con extensión variable](../assets/img/webp/pltz/image(188).webp)
+
+### Buscar por Caracteres Específicos: Los Corchetes ([])
+
+Para buscar archivos que comiencen por ciertos caracteres, usa corchetes. Por ejemplo, para listar archivos que comiencen con "c" o "i":
+```bash
+ls -l [ci]*
+```
+
+![Buscar archivos que comiencen con "c" o "i"](../assets/img/webp/pltz/image(190).webp)
+
+Recuerda que la búsqueda es **case sensitive**. Para incluir ambas variantes (minúsculas y mayúsculas), escribe:
+```bash
+ls -l [cCiI]*
+```
+
+![Búsqueda case sensitive](../assets/img/webp/pltz/image(191).webp)
+
+También puedes buscar por un rango de números. Por ejemplo, para buscar archivos que comiencen con "foto" y tengan un número entre 2 y 6:
+```bash
+ls -l foto[2-6]*
+```
+
+![Buscar archivos con rango numérico](../assets/img/webp/pltz/image(192).webp)
+
+---
+
+## Tabla Resumen de Wildcards
+
+| Wildcard | Función                                      |
+| -------- | -------------------------------------------- |
+| **\***  | Busca todo.                                  |
+| **?**   | Busca por cantidad exacta de caracteres.   |
+| **[ ]** | Busca por caracteres específicos o rangos. |
+
+---
+
+
+
+Los comandos y wildcards son herramientas poderosas en la línea de comando que te permiten interactuar con el sistema de forma directa y eficiente. Ya sea que estés creando alias para agilizar tu flujo de trabajo o usando wildcards para encontrar archivos específicos, dominar estos conceptos te abrirá un mundo de posibilidades.
+
+¡Sigue explorando, practicando y perfeccionando tus habilidades en la terminal! Con cada comando, te acercarás más a convertirte en un verdadero maestro del entorno UNIX. ¡Adelante, hacker en potencia!
+
+
+
+
+![Buscar archivos con un solo carácter](../assets/img/webp/pltz/image(187).webp)
+
+Si sabes que el nombre tiene dos dígitos, utiliza dos signos de interrogación:
+```bash
+ls -l foto??.jpg
+```
+
+![Buscar archivos con dos caracteres](../assets/img/webp/pltz/image(189).webp)
+
+También puedes combinar wildcards para mayor flexibilidad:
+```bash
+ls -l foto?.*
+```
+
+![Buscar archivos con extensión variable](../assets/img/webp/pltz/image(188).webp)
+
+### Buscar por Caracteres Específicos: Los Corchetes ([])
+
+Para buscar archivos que comiencen por ciertos caracteres, usa corchetes. Por ejemplo, para listar archivos que comiencen con "c" o "i":
+```bash
+ls -l [ci]*
+```
+
+![Buscar archivos que comiencen con "c" o "i"](../assets/img/webp/pltz/image(190).webp)
+
+Recuerda que la búsqueda es **case sensitive**. Para incluir ambas variantes (minúsculas y mayúsculas), escribe:
+```bash
+ls -l [cCiI]*
+```
+
+![Búsqueda case sensitive](../assets/img/webp/pltz/image(191).webp)
+
+También puedes buscar por un rango de números. Por ejemplo, para buscar archivos que comiencen con "foto" y tengan un número entre 2 y 6:
+```bash
+ls -l foto[2-6]*
+```
+
+![Buscar archivos con rango numérico](../assets/img/webp/pltz/image(192).webp)
+
+---
+
+## Tabla Resumen de Wildcards
+
+| Wildcard | Función                                      |
+| -------- | -------------------------------------------- |
+| **\***  | Busca todo.                                  |
+| **?**   | Busca por cantidad exacta de caracteres.   |
+| **[ ]** | Busca por caracteres específicos o rangos. |
+
+---
+
+
+
+Los comandos y wildcards son herramientas poderosas en la línea de comando que te permiten interactuar con el sistema de forma directa y eficiente. Ya sea que estés creando alias para agilizar tu flujo de trabajo o usando wildcards para encontrar archivos específicos, dominar estos conceptos te abrirá un mundo de posibilidades.
+
+¡Sigue explorando, practicando y perfeccionando tus habilidades en la terminal! Con cada comando, te acercarás más a convertirte en un verdadero maestro del entorno UNIX. ¡Adelante, hacker en potencia!
+
+
+
+
 # Conceptos básicos de estadistica y Probabilidad
 
 ...

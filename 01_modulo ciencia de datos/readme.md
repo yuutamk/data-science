@@ -246,7 +246,7 @@ Por ejemplo, en el sector financiero, los modelos de ciencia de datos permiten d
 
 ![panorama data science](../assets/img/ciencia-datos-board.jpg)
 
-La ciencia de datos es un universo en constante expansión, y elegir el lugar adecuado para comenzar a programar es el primer paso para convertirte en un verdadero explorador de datos. En este blog descubrirás desde la elección de la plataforma ideal hasta la configuración de ambientes virtuales para garantizar que cada proyecto tenga su propio espacio seguro y personalizado. 
+La ciencia de datos es un universo en constante expansión, y elegir el lugar adecuado para comenzar a programar es el primer paso para convertirte en un verdadero explorador de datos. En este curso descubrirás desde la elección de la plataforma ideal hasta la configuración de ambientes virtuales para garantizar que cada proyecto tenga su propio espacio seguro y personalizado. 
 
 ---
 
@@ -1183,72 +1183,8 @@ Esto te permitirá navegar visualmente por tus directorios, como si estuvieras u
 
 ¡Sigue explorando y conviértete en el maestro de la línea de comando!
 
-
-# ¡Domina el Arte de los Comandos y Wildcards en la Terminal!
-
-¡Bienvenido, intrépido explorador digital! En este viaje nos adentraremos en el lenguaje secreto de la línea de comando, donde cada instrucción es una orden directa a tu ordenador. Descubre cómo funcionan los comandos, qué significan y cómo usar wildcards para encontrar patrones en tus archivos y directorios. Prepárate para convertirte en un verdadero maestro de la terminal.
-
 ---
 
-## ¿Qué es un Comando?
-
-Un **comando** es un mensaje enviado al ordenador que provoca una respuesta; es una orden que le indica al sistema qué acción debe ejecutar. Cada sistema operativo incluye un conjunto de comandos básicos que te permiten realizar tareas simples de forma directa. En sistemas basados en **UNIX**, los comandos son la clave para interactuar con el entorno.
-
-Un comando puede significar cuatro cosas:
-- **Un programa ejecutable.**
-- **Un comando de utilidad de la shell:** Es un programa que tiene funciones específicas, como `cd`.
-- **Una función de shell:** Son funciones definidas en la shell, por ejemplo, `mkdir`.
-- **Un alias:** Una forma abreviada de un comando, como `ls`.
-
-![¿Qué es un comando?](../assets/img/webp/pltz/que-es-un-comando.webp)
-
----
-
-## Ejemplos de Comandos Básicos en la Terminal
-
-Aquí te presentamos algunos comandos esenciales que te ayudarán a explorar y personalizar tu experiencia en la terminal:
-
-- **`type <comando>`:** Conoce qué tipo de comando es (ejemplo: `type ls`).
-- **`alias l="<secuencia de comandos>"`:** Crea un alias temporal para un comando. Por ejemplo, para definir `l` como un atajo para `ls -lh`:
-  ```bash
-  alias l="ls -lh"
-  ```
-  Nota: Los alias se pierden al cerrar la terminal.
-- **`help <comando>`:** Muestra una breve ayuda sobre el comando.
-- **`man <comando>`:** Abre el manual completo del comando.
-- **`info <comando>`:** Proporciona información resumida en otro formato.
-- **`whatis <comando>`:** Describe el comando en una sola línea (por ejemplo, `whatis ls`).
-
-Con estos comandos, no solo descubres qué hace cada instrucción, sino que también aprendes a crear tus propios atajos para agilizar tu trabajo.
-
----
-
-## Wildcards: Los Comodines del Mundo Digital
-
-Las **wildcards** o comodines son caracteres especiales que te permiten buscar patrones en nombres de archivos y directorios. Son especialmente útiles cuando trabajas con comandos de manipulación de archivos como `mv`, `cp` y `rm`.
-
-### Buscar Todo: El Asterisco (*)
-
-El asterisco te ayuda a seleccionar todos los archivos que cumplan con un patrón. Por ejemplo, para listar todos los archivos con extensión `.png`:
-```bash
-ls -l *.png
-```
-
-![Buscar archivos .png](../assets/img/webp/pltz/image(185).webp)
-
-También puedes colocarlo al final para buscar archivos que comiencen con ciertos caracteres. Por ejemplo, para buscar archivos que comiencen por "fotoDe":
-```bash
-ls -l fotoDe*
-```
-
-![Archivos que comienzan por "fotoDe"](../assets/img/webp/pltz/image(186).webp)
-
-### Buscar por Cantidad Exacta de Caracteres: El Signo de Interrogación (?)
-
-El signo de interrogación `?` te permite sustituir un único carácter. Por ejemplo, para buscar archivos como "foto1.png", "foto2.png", etc.:
-```bash
-ls -l foto?.png 
-```
 # ¡Domina el Arte de los Comandos y Wildcards en la Terminal!
 
 ¡Bienvenido, intrépido explorador digital! En este viaje nos adentraremos en el lenguaje secreto de la línea de comando, donde cada instrucción es una orden directa a tu ordenador. Descubre cómo funcionan los comandos, qué significan y cómo usar wildcards para encontrar patrones en tus archivos y directorios. Prepárate para convertirte en un verdadero maestro de la terminal.
@@ -1375,65 +1311,460 @@ Los comandos y wildcards son herramientas poderosas en la línea de comando que 
 
 
 
-![Buscar archivos con un solo carácter](../assets/img/webp/pltz/image(187).webp)
-
-Si sabes que el nombre tiene dos dígitos, utiliza dos signos de interrogación:
-```bash
-ls -l foto??.jpg
-```
-
-![Buscar archivos con dos caracteres](../assets/img/webp/pltz/image(189).webp)
-
-También puedes combinar wildcards para mayor flexibilidad:
-```bash
-ls -l foto?.*
-```
-
-![Buscar archivos con extensión variable](../assets/img/webp/pltz/image(188).webp)
-
-### Buscar por Caracteres Específicos: Los Corchetes ([])
-
-Para buscar archivos que comiencen por ciertos caracteres, usa corchetes. Por ejemplo, para listar archivos que comiencen con "c" o "i":
-```bash
-ls -l [ci]*
-```
-
-![Buscar archivos que comiencen con "c" o "i"](../assets/img/webp/pltz/image(190).webp)
-
-Recuerda que la búsqueda es **case sensitive**. Para incluir ambas variantes (minúsculas y mayúsculas), escribe:
-```bash
-ls -l [cCiI]*
-```
-
-![Búsqueda case sensitive](../assets/img/webp/pltz/image(191).webp)
-
-También puedes buscar por un rango de números. Por ejemplo, para buscar archivos que comiencen con "foto" y tengan un número entre 2 y 6:
-```bash
-ls -l foto[2-6]*
-```
-
-![Buscar archivos con rango numérico](../assets/img/webp/pltz/image(192).webp)
-
----
-
-## Tabla Resumen de Wildcards
-
-| Wildcard | Función                                      |
-| -------- | -------------------------------------------- |
-| **\***  | Busca todo.                                  |
-| **?**   | Busca por cantidad exacta de caracteres.   |
-| **[ ]** | Busca por caracteres específicos o rangos. |
-
 ---
 
 
+# Comandos de entrada y salida
 
-Los comandos y wildcards son herramientas poderosas en la línea de comando que te permiten interactuar con el sistema de forma directa y eficiente. Ya sea que estés creando alias para agilizar tu flujo de trabajo o usando wildcards para encontrar archivos específicos, dominar estos conceptos te abrirá un mundo de posibilidades.
+¿Alguna vez te has preguntado cómo **domesticar la salida de tus comandos**? ¡Hoy descubrirás el arte de las redirecciones! Aprende a guardar resultados, manejar errores y concatenar información como un verdadero ninja de la terminal. 🌟  
 
-¡Sigue explorando, practicando y perfeccionando tus habilidades en la terminal! Con cada comando, te acercarás más a convertirte en un verdadero maestro del entorno UNIX. ¡Adelante, hacker en potencia!
+---
+
+### **🌌 Entradas y Salidas**  
+Cuando escribes un comando, **creas una entrada** (*Standard Input* o `stdin*), y al ejecutarlo, generas una **salida** (*Standard Output* o `stdout`). Pero… ¿y si algo falla? Ahí aparece el *Standard Error* (`stderr`), tu alerta roja.  
+
+💡 *¿Sabías que* estos flujos se identifican con números llamados **file descriptors**? ¡Así es!  
+- **0**: `stdin` (entrada).  
+- **1**: `stdout` (salida).  
+- **2**: `stderr` (error).  
+
+![file descriptors](https://static.platzi.com/media/articlases/Images/image%28100%29.png)  
+*Los file descriptors son como canales secretos de comunicación.*  
+
+---
+
+### **🚀 Redireccionando Salidas con `>`: ¡Guarda Tus Resultados!**  
+Imagina que ejecutas `ls -l` y ves una lista de archivos. ¿Y si quieres **guardar esa info** en un archivo? ¡Usa el operador `>`!  
+
+```bash  
+ls -l > output.txt  
+```  
+![comando ls -l > output.txt](https://static.platzi.com/media/articlases/Images/image%28103%29.png)  
+*El resultado ya no aparece en pantalla… ¡ahora vive en `output.txt`!*  
+
+⚠️ *Cuidado*: Si el archivo ya existe, `>` lo **sobrescribirá**.  
+
+---
+
+### **🔄 Concatenando con `>>`: Suma sin Borrar**  
+¿Quieres **agregar** contenido sin perder lo anterior? ¡Usa `>>`!  
+
+```bash  
+ls -l >> output.txt  
+```  
+![comando ls -l >> output.txt](https://static.platzi.com/media/articlases/Images/image%28104%29.png)  
+*Observa cómo se repite la palabra `total`: es el tamaño acumulado de tus carpetas.*  
+
+---
+
+### **❌ Manejo de Errores con `2>`: Atrapa los Fallos**  
+Los errores también pueden redirigirse. Por ejemplo, si usas una opción inválida:  
+
+```bash  
+ls -lñ 2> error.txt  
+```  
+![error.txt](https://static.platzi.com/media/articlases/Images/image%28105%29.png)  
+*El error se guarda en `error.txt`, ¡y tu pantalla sigue limpia!*  
+
+---
+
+### **🎭 Combinando Salidas y Errores con `2>&1`**  
+¿Quieres capturar **todo** (éxitos y errores) en un mismo archivo? ¡Combina los file descriptors!  
+
+```bash  
+ls -l > output.txt 2>&1  
+```  
+![image.png](https://static.platzi.com/media/articlases/Images/image%28106%29.png)  
+*Primero se guarda el éxito, luego el error. ¡Nada se escapa!*  
+
+---
+
+### **📋 Tabla de Operadores**  
+
+| Operador | Función |  
+| --- | --- |  
+| `>` | Redirige `stdout` (sobrescribe el archivo). |  
+| `>>` | Concatena `stdout` al final del archivo. |  
+| `2>` | Redirige `stderr`. |  
+| `2>&1` | Redirige `stderr` y `stdout` al mismo lugar. |  
+
+---
+
+### **🎉 ¡Tú Eres el Dueño del Flujo!**  
+Ahora que controlas las redirecciones, podrás:  
+- **Automatizar tareas** (guardar logs de procesos).  
+- **Depurar errores** sin saturar la terminal.  
+- **Organizar información** como un profesional.  
+
+🛠️ *Reto*: Crea un script que guarde en un archivo la fecha actual y liste tu carpeta de documentos… ¡usando solo redirecciones!  
+
+---
+
+**💡 ¿Quieres más poder?** Aprende a combinar redirecciones con pipes (`|`) o domina el arte de los scripts Bash. ¡El límite es tu imaginación!  
+
+👉 *¿Te sirvió esta guía? Compártela con alguien que esté aprendiendo a usar la terminal. ¡Juntos somos más fuertes!*  
+
+---  
+
+# Pipe operator
+
+¿Sabías que puedes **encadenar comandos** como si fueran eslabones de un poder infinito? ¡El operador `|` (pipe) es tu varita mágica! Descubre cómo combinar comandos, crear flujos de trabajo y hasta imprimir vacas parlantes. 🌈  
+
+---
+
+### **🌌 ¿Qué es el Pipe Operator?**  
+El operador `|` toma la **salida de un comando** y la convierte en la **entrada de otro**. Imagínalo como un *tubo mágico* que conecta acciones:  
+```bash  
+comando1 | comando2  
+```  
+- **Ejemplo**: `ls -lh | less` → Lista archivos y los muestra en un scroll interactivo.  
+
+---
+
+### **🛠️ Comandos Clave para Pipe Operator**  
+
+#### **1. Concatenar Archivos con `cat`**  
+¿Quieres unir el contenido de dos archivos en uno solo? ¡Usa `cat`!  
+```bash  
+cat images.txt secretosDeEstado.txt  
+```  
+![image.png](https://static.platzi.com/media/articlases/Images/image%28110%29.png)  
+*Combina listas de archivos en una sola salida.*  
+
+---
+
+#### **2. Guardar Salidas con `tee`**  
+¿Necesitas crear un archivo *mientras* ves el resultado en pantalla? `tee` es tu aliado:  
+```bash  
+cat images.txt secretosDeEstado.txt | tee archivos.txt  
+```  
+![image.png](https://static.platzi.com/media/articlases/Images/image%28111%29.png)  
+*El archivo `archivos.txt` guarda la salida, ¡y tú ves todo en vivo!*  
+
+🔍 **Inspecciona el resultado**:  
+```bash  
+less archivos.txt  
+```  
+![image.png](https://static.platzi.com/media/articlases/Images/image%28112%29.png)  
+
+---
+
+#### **3. Ordenar con `sort`**  
+¿Caos en tus listas? Organízalas alfabéticamente:  
+```bash  
+ls | sort | tee archivosHome.txt  
+```  
+![image.png](https://static.platzi.com/media/articlases/Images/image%28113%29.png)  
+*Ahora tus archivos están en orden A-Z.*  
+
+---
+
+### **🎨 Extra: Vacas y Colores**  
+¡Convierte la terminal en un parque de diversiones!  
+
+#### **Vacas Parlantes con `cowsay`**  
+```bash  
+echo "Nunca pares de aprender" | cowsay  
+```  
+```
+_________________________  
+< Nunca pares de aprender >  
+ -------------------------  
+        \   ^__^  
+         \  (oo)\_______  
+            (__)\       )\/\  
+                ||----w |  
+                ||     ||  
+```  
+*¡Una vaca filosofa! 🐄*  
+
+#### **Texto Arcoíris con `lolcat`**  
+```bash  
+echo "Texto" | lolcat  
+```  
 
 
+---
 
+### **📋 Cheat Sheet: Comandos + Pipe Operator**  
+
+| Comando | Función |  
+| --- | --- |  
+| `sort` | Ordena salidas alfabéticamente. |  
+| `cat` | Concatena archivos o entradas. |  
+| `tee` | Guarda salidas en archivo *y* muestra en pantalla. |  
+| `cowsay` | Dibuja una vaca que habla. |  
+| `lolcat` | Pinta texto con colores del arcoíris. |  
+
+---
+
+### **🚀 Casos de Uso Épicos**  
+- **Generar logs organizados**:  
+  ```bash  
+  ls -l | sort | tee lista_ordenada.txt  
+  ```  
+- **Depurar errores creativamente**:  
+  ```bash  
+  ls -ñ 2>&1 | cowsay  
+  ```  
+  *¡Una vaca te dirá qué salió mal!*  
+
+---
+
+### **🔍 Preguntas Frecuentes**  
+❓ *¿Puedo usar múltiples pipes?*  
+¡Sí! Ejemplo: `comando1 | comando2 | comando3`.  
+
+❓ *¿Cómo instalo `cowsay` o `lolcat`?*  
+En Ubuntu:  
+```bash  
+sudo apt install cowsay lolcat  
+```  
+
+---
+
+### **🎯 Tu Terminal es un Playground**  
+Con el pipe operator, puedes:  
+- Automatizar tareas complejas en segundos.  
+- Transformar salidas aburridas en obras de arte.  
+- Impresionar a tus amigos (o a tu yo futuro).  
+
+🛠️ **Reto**: Crea un script que liste archivos, los ordene, guarde el resultado en un archivo y lo muestre con `lolcat`.  
+
+---
+
+**💡 ¿Listo para más?** Aprende a combinar pipes con `grep` para buscar patrones o usa `awk` para procesar texto como un profesional.  
+
+
+---  
+
+
+# **¡Operadores de Control en Linux**  
+
+¿Alguna vez has querido ejecutar múltiples comandos en la terminal sin perder tiempo pulsando *Enter* una y otra vez? ¡Los operadores de control son la clave! Estos símbolos reservados te permiten encadenar comandos como un experto, automatizar tareas y hasta tomar decisiones en tiempo real. Aquí te revelamos cómo usarlos.  
+
+---
+
+### **1. El Poder del «;»: Ejecución Secuencial**  
+Imagina crear un directorio, listar archivos y ver la fecha actual… ¡todo en una línea! Con el operador `;`, los comandos se ejecutan **uno tras otro**, en orden:  
+
+```bash
+mkdir ProyectosSecretos; ls; date
+```  
+
+![image.png](https://static.platzi.com/media/articlases/Images/image%28114%29.png)  
+
+- **¿Qué pasó?**  
+  - Se creó la carpeta `ProyectosSecretos`.  
+  - Se listaron los archivos del directorio actual.  
+  - ¡Y apareció la fecha del sistema!  
+
+---
+
+### **2. «&»: Multitarea en la Terminal**  
+¿Quieres ser más eficiente? Con `&`, los comandos se ejecutan **en segundo plano**, liberando la terminal para seguir trabajando:  
+
+```bash
+date & echo "Hola" & cal
+```  
+
+![image.png](https://static.platzi.com/media/articlases/Images/image%28115%29.png)  
+
+- **Detalles clave**:  
+  - Los números como `[1] 349` indican *procesos en segundo plano*.  
+  - `date` y `echo "Hola"` + `cal` se ejecutaron en hilos separados.  
+
+---
+
+### **3. «&&»: Ejecución Condicional (AND)**  
+¿Solo quieres que un comando se ejecute si el anterior tuvo éxito? ¡Usa `&&`!  
+
+**Ejemplo fallido**:  
+```bash
+cd lp && mkdir Comida  
+```  
+![image.png](https://static.platzi.com/media/articlases/Images/image%28116%29.png)  
+*Como `cd lp` falló (no existe el directorio), `mkdir` no se ejecutó.*  
+
+**Ejemplo exitoso**:  
+```bash
+cd ProyectosSecretos/ && touch ProyectoExplosivo.txt && ls  
+```  
+![image.png](https://static.platzi.com/media/articlases/Images/image%28117%29.png)  
+*¡Todo funcionó! Se cambió de directorio, se creó el archivo y se listó el contenido.*  
+
+---
+
+### **4. «||»: Condicional OR (Uno u Otro)**  
+¿No estás seguro de qué comando usar? Con `||`, la terminal intentará ejecutar **al menos uno**:  
+
+```bash
+cd ProyectosSecretos/ || cambia-carpeta ProyectosSecretos/  
+```  
+![image.png](https://static.platzi.com/media/articlases/Images/image%28119%29.png)  
+*Aunque `cambia-carpeta` no existe, `cd` funcionó, ¡así que el resultado fue exitoso!*  
+
+---
+
+### **5. Combinando Operadores: ¡El Toque Final!**  
+Mezcla `||` y `&&` para crear flujos avanzados:  
+
+```bash
+cd ProyectosSecretos/ || cambia-carpeta ProyectosSecretos/ && mkdir ProyectoIncreible  
+```  
+![image.png](https://static.platzi.com/media/articlases/Images/image%28120%29.png)  
+*Si `cd` o `cambia-carpeta` funcionan, se creará la carpeta `ProyectoIncreible`.*  
+
+---
+
+### **Resumen Visual: Operadores y Comandos**  
+
+#### Tabla de Operadores  
+| Símbolo | Función |  
+|---------|---------|  
+| `;`     | Ejecución secuencial (uno tras otro). |  
+| `&`     | Ejecución asíncrona (en segundo plano). |  
+| `&&`    | Ejecuta solo si el anterior tuvo éxito. |  
+| `\|\|`   | Ejecuta hasta que uno funcione. |  
+
+#### Comandos Clave  
+| Comando | Acción |  
+|---------|--------|  
+| `echo`  | Imprime texto en pantalla. |  
+| `cal`   | Muestra un calendario. |  
+| `date`  | Revela la fecha y hora actual. |  
+
+---
+
+### **¡Conviértete en un Ninja de la Terminal!**  
+Los operadores de control son herramientas esenciales para dominar Linux. ¿Por qué no pruebas combinarlos? Por ejemplo:  
+
+```bash
+mkdir NuevoProyecto && cd $_ & echo "¡Listo!"  
+```  
+
+*¿Qué hace esto?*  
+1. Crea `NuevoProyecto`.  
+2. Si se crea, entra al directorio (`$_` usa el último argumento del comando anterior).  
+3. Muestra "¡Listo!" mientras trabajas en segundo plano.  
+
+¡Experimenta, falla, aprende y repite! La terminal es tu lienzo. �💻
+
+
+---
+
+
+**¡Domina los Permisos en Linux: Entendiendo Quién Puede Hacer Qué!**  
+
+¿Alguna vez te has preguntado por qué algunos archivos no se pueden modificar o ejecutar? La respuesta está en los **permisos**, un sistema que protege tus archivos y directorios de accesos no autorizados. Aquí te explicamos cómo funcionan y cómo interpretarlos como un experto.  
+
+---
+
+### **1. El Primer Carácter: ¿Archivo, Directorio o Enlace?**  
+Cuando ejecutas `ls -l`, la primera columna muestra un código como `-rwxr-xr--`. **El primer carácter** revela el tipo de archivo:  
+
+| Símbolo | Tipo | Ejemplo |  
+|---------|------|---------|  
+| `-`     | Archivo normal (documento, imagen, etc.). | `-rw-r--r--` |  
+| `d`     | Directorio. | `drwxr-xr-x` |  
+| `l`     | Enlace simbólico (acceso directo a otro archivo). | `lrwxrwxrwx` |  
+| `b`     | Archivo especial (como un disco duro). | `brw-rw----` |  
+
+![image.png](https://static.platzi.com/media/articlases/Images/image%28121%29.png)  
+*Ejemplo de salida de `ls -l`.*  
+
+---
+
+### **2. Dueño, Grupo y Mundo: ¿Quién es Quién?**  
+Los permisos se dividen en tres grupos de usuarios, representados por **tres caracteres cada uno**:  
+
+1. **Dueño (Owner)**: El creador del archivo. Tiene los **primeros 3 caracteres**.  
+2. **Grupo (Group)**: Usuarios con permisos asignados. Siguientes 3 caracteres.  
+3. **Mundo (World)**: Cualquier otro usuario. Últimos 3 caracteres.  
+
+![Sin título.png](https://static.platzi.com/media/articlases/Images/Sin%20t%C3%ADtulo%284%29.png)  
+*Estructura de los permisos: Dueño, Grupo y Mundo.*  
+
+---
+
+### **3. r, w, x: El ABC de los Permisos**  
+Cada grupo de 3 caracteres indica si un usuario puede **leer**, **escribir** o **ejecutar** el archivo:  
+
+| Símbolo | Permiso | Acción |  
+|---------|---------|--------|  
+| `r`     | Lectura | Ver el contenido. |  
+| `w`     | Escritura | Modificar o borrar. |  
+| `x`     | Ejecución | Ejecutar (si es un programa). |  
+
+**Ejemplo 1**: `drwxr-xr-x`  
+- **`d`**: Directorio.  
+- **`rwx`**: El dueño puede leer, escribir y entrar al directorio.  
+- **`r-x`**: El grupo puede leer y entrar, pero no escribir.  
+- **`r-x`**: Los demás tienen los mismos permisos que el grupo.  
+
+**Ejemplo 2**: `-rw-r--r--`  
+- **`-`**: Archivo normal.  
+- **`rw-`**: El dueño puede leer y escribir.  
+- **`r--`**: Grupo y mundo solo pueden leer.  
+
+---
+
+### **4. Permisos en Octal: La Magia de los Números**  
+Los permisos también se representan con números del 0 al 7. Cada dígito corresponde a un grupo (dueño, grupo, mundo), y se calcula sumando:  
+- **4** para lectura (`r`).  
+- **2** para escritura (`w`).  
+- **1** para ejecución (`x`).  
+
+**Ejemplo**: `r-x` = 4 (lectura) + 0 (escritura) + 1 (ejecución) = **5**.  
+
+| Permisos | Cálculo | Octal |  
+|----------|---------|-------|  
+| `rwx`    | 4+2+1   | 7     |  
+| `r-x`    | 4+0+1   | 5     |  
+| `rw-`    | 4+2+0   | 6     |  
+| `r--`    | 4+0+0   | 4     |  
+
+Así, `rwxr-xr--` se traduce a **751**:  
+- Dueño: 7 (`rwx`).  
+- Grupo: 5 (`r-x`).  
+- Mundo: 4 (`r--`).  
+
+---
+
+### **5. Ejercicios Prácticos**  
+¡Pon a prueba lo aprendido! Convierte estos casos a símbolos y números:  
+
+**1. Directorio**: Dueño (lectura y escritura), Grupo (escritura y ejecución), Mundo (sin permisos).  
+- **Símbolos**: `drw--wx---`  
+- **Octal**: `630` (6 para dueño, 3 para grupo, 0 para mundo).  
+
+**2. Enlace simbólico**: Dueño (todos los permisos), Grupo y Mundo (solo lectura).  
+- **Símbolos**: `lrwxr--r--`  
+- **Octal**: `744` (7 para dueño, 4 para grupo y mundo).  
+
+**3. Archivo normal**: Todos pueden leer y escribir, pero Mundo no ejecuta.  
+- **Símbolos**: `-rw-rw-rw-`  
+- **Octal**: `666` (6 para todos).  
+
+---
+
+### **6. Representación Gráfica**  
+![imagen](https://static.platzi.com/media/user_upload/1-0e5c063a-3fba-42a8-84cc-a2bf6687206b.jpg)  
+*Diagrama visual de permisos en Linux.*  
+
+---
+
+### **¡Conviértete en el Guardián de Tus Archivos!**  
+Los permisos son tu primera línea de defensa en Linux. ¿Quieres cambiar permisos? Usa `chmod`:  
+```bash  
+chmod 755 archivo_importante.sh  # rwxr-xr-x  
+```  
+O con símbolos:  
+```bash  
+chmod u+x,go-w script_secreto  # Agrega ejecución al dueño, quita escritura a grupo y mundo.  
+```  
+
+¿Listo para dominar la terminal? ¡Experimenta y protege tus archivos como un profesional! 🔐💻
 
 # Conceptos básicos de estadistica y Probabilidad
 

@@ -660,3 +660,221 @@ Estas funciones no solo agilizan el proceso, sino que también reducen la posibi
 Las medidas de dispersión son clave para profundizar en el análisis estadístico, ya que nos ofrecen una visión completa del comportamiento de los datos más allá del centro. Practicar y aplicar estos conceptos con herramientas tecnológicas te ayudará a consolidar tu comprensión y mejorar tus habilidades en análisis de datos.
 
 ¡Continúa explorando y experimentando con estos métodos! Cada esfuerzo en el aprendizaje de la estadística te acerca más a convertirte en un experto en el manejo de la información. ¡Adelante, el camino del conocimiento está lleno de posibilidades y desafíos que te harán crecer profesional y personalmente!
+
+---
+
+## Ajustando Datos: ¿Qué Hacer Cuando Hay Errores en las Puntuaciones?
+
+En el proceso de recolección de datos es común encontrar errores o inconsistencias que requieren ajustes en las puntuaciones. Comprender cómo estas modificaciones afectan las medidas de tendencia central y dispersión es fundamental para mantener la precisión en tu análisis.
+
+### Efecto de un Desplazamiento en las Medidas de Tendencia Central
+
+Imagina que, al calificar exámenes, descubres un error en dos preguntas que otorga a cada estudiante cuatro puntos adicionales. Para corregirlo, deberás sumar esos cuatro puntos a cada puntuación original. Este desplazamiento uniforme impacta directamente en las medidas centrales:
+
+- **Media:** La media se incrementa en la misma magnitud del desplazamiento. Por ejemplo, si la media original era 68.6, al sumar cuatro puntos a cada dato, la nueva media será 72.6.
+- **Mediana:** La mediana también se incrementará en cuatro unidades, pasando, por ejemplo, de 67 a 71.
+- **Moda:** De igual forma, la moda se ajusta de manera uniforme, modificándose de 66 a 70.
+
+Este comportamiento demuestra que al mover todos tus datos de forma constante, las tendencias centrales se ajustan de manera uniforme.
+
+### Impacto en el Rango y el IQR
+
+Aunque el mínimo y el máximo del conjunto de datos cambian tras el desplazamiento, la diferencia entre ellos —el rango— se mantiene constante. Si ambos extremos reciben el mismo ajuste, la distancia entre ellos no varía. Lo mismo ocurre con el rango intercuartílico (IQR): al sumar el mismo valor a cada dato, el IQR no se ve afectado. Esta propiedad es crucial cuando trabajas con mediciones agregadas, ya que solo necesitarás ajustar las medidas centrales sin preocuparte por recalcular la dispersión.
+
+### Transformaciones Escaladas: Multiplicación por un Escalar
+
+Además del desplazamiento, puedes encontrarte con transformaciones en las que multiplicas tus datos por un número constante. Supongamos que decides doblar las puntuaciones originales:
+
+- **Media, Mediana y Moda:** Al multiplicar por dos, todas estas medidas se duplican. Si la puntuación promedio era 68.6, se transformará en 137.2.
+- **Rango e IQR:** Las distancias entre los valores también se amplían proporcionalmente, lo que implica un aumento en la dispersión total del conjunto de datos.
+
+Este tipo de transformación afecta de manera directa la percepción de la variabilidad en tus datos, escalando tanto las medidas centrales como los índices de dispersión.
+
+### Agregar o Eliminar Elementos en el Conjunto de Datos
+
+Modificar la cantidad de elementos en tu conjunto también puede tener impactos significativos:
+
+- **Media y Mediana:** Son sensibles a la cantidad de elementos. Al eliminar o agregar datos, la media y la mediana pueden cambiar, ya que el total se divide entre un nuevo número de elementos.
+- **Rango:** Si el valor eliminado o agregado no es el mínimo ni el máximo, el rango se mantendrá igual. Sin embargo, si se afecta alguno de estos extremos, es necesario recalcularlo.
+
+Estas modificaciones requieren una reevaluación de las métricas principales para asegurar que la representación de los datos siga siendo precisa.
+
+### Consejo Práctico
+
+Para interiorizar cómo operan estos cambios, practica con tus propios datos. Experimenta desplazando tus valores o multiplicándolos por un escalar y observa cómo se modifican las medidas de tendencia central y dispersión. Esta práctica no solo afianza tu comprensión de los conceptos matemáticos, sino que también fortalece tu capacidad para resolver problemas complejos en análisis de datos.
+
+¡Sigue explorando y expandiendo tus conocimientos en estadística! Cada ajuste y transformación es una oportunidad para aprender y mejorar en el manejo de la información.
+
+
+---
+
+## El Poder del Boxplot en el Análisis Estadístico
+
+El **boxplot** es una herramienta gráfica fundamental que te permite representar de manera visual la distribución de tus datos en un solo vistazo. Con este gráfico, es posible identificar rápidamente cómo se concentran o dispersan los valores en el 50% central del conjunto, detectar sesgos y observar la variabilidad de los datos a través de su rango intercuartílico.
+
+### Construcción de un Boxplot
+
+Para crear un boxplot, necesitas el resumen de cinco números clave obtenidos de un conjunto de datos ordenado:
+
+- **Mínimo:** El valor más bajo del conjunto.
+- **Primer Cuartil (Q1):** El valor que separa el 25% inferior de los datos.
+- **Mediana (Cuartil 2):** El valor central que divide el conjunto en dos mitades iguales.
+- **Tercer Cuartil (Q3):** El valor que separa el 25% superior de los datos.
+- **Máximo:** El valor más alto del conjunto.
+
+### Determinación de la Mediana y los Cuartiles
+
+Para identificar la mediana y los cuartiles, sigue estos pasos:
+
+1. **Ordena tus datos de menor a mayor.**
+2. **Mediana:**  
+   - Si el número total de observaciones es impar, la mediana es el valor en la posición \((N + 1) / 2\).  
+   - Si es par, la mediana será el promedio de los dos valores centrales.
+3. **Cuartiles:**  
+   - **Primer Cuartil (Q1):** Es la mediana del subconjunto de datos que se encuentra antes de la mediana principal.  
+   - **Tercer Cuartil (Q3):** Es la mediana del subconjunto de datos que se encuentra después de la mediana principal.
+
+### Ejemplo Práctico
+
+Considera el siguiente conjunto de puntuaciones, ya ordenado de menor a mayor:
+
+```
+60, 62, 64, 65, 66, 67, 69, 70, 71, 73, 75, 77
+```
+
+Para estos datos:
+
+- **Mínimo:** 60  
+- **Máximo:** 77  
+- **Mediana (Q2):** Con 12 datos, la mediana se encuentra entre el 6° y 7° valor. En este ejemplo, si tomamos el promedio de 67 y 69, la mediana sería 68. Sin embargo, en la información proporcionada se indicó que la mediana es 67, lo que sugiere que se ha utilizado otro método o redondeo (puede ajustarse según el criterio de cálculo).  
+- **Primer Cuartil (Q1):** Promedio del 3° y 4° valor: \((64 + 65)/2 = 64.5\).  
+- **Tercer Cuartil (Q3):** Promedio del 9° y 10° valor: \((71 + 73)/2 = 72\).
+
+Con estos cinco números, el boxplot se construye dibujando una caja que va desde Q1 (64.5) hasta Q3 (72), con una línea en el interior que marca la mediana. Los "bigotes" se extienden desde la caja hasta el mínimo (60) y el máximo (77), proporcionando una representación clara de la dispersión total y permitiendo identificar posibles valores atípicos.
+
+![boxplot](./assets/box-plot-image.jpg)
+
+
+### Consejos para Interpretar un Boxplot
+
+- **Concentración de Valores:**  
+  Una caja más estrecha indica que los datos están más concentrados, mientras que una caja ancha sugiere mayor variabilidad en el 50% central.
+  
+- **Valores Atípicos:**  
+  Observa los puntos que se encuentran fuera de los límites de los bigotes. Estos pueden señalar outliers o valores extremos que merecen una revisión adicional.
+  
+- **Simetría y Sesgo:**  
+  Si la caja y los bigotes están equilibrados a ambos lados de la mediana, la distribución es simétrica. En cambio, si están desalineados, se puede inferir un sesgo en la distribución (hacia la derecha o la izquierda).
+
+El boxplot es una herramienta poderosa que te permitirá tomar decisiones informadas al analizar distribuciones de datos. Explora su uso en tus proyectos, experimenta con diferentes conjuntos de datos y observa cómo esta visualización facilita la comprensión de complejas variaciones estadísticas. ¡Domina su uso y potencia tus habilidades en el análisis estadístico!
+
+
+---
+
+
+## Representación de Datos: Fundamentales para el Análisis Estadístico
+
+La **representación de datos** es el arte y la ciencia de transformar números en información comprensible. Esta habilidad es clave para interpretar y comunicar resultados de manera efectiva, ya que, mediante unos pocos valores, podemos hacer afirmaciones concretas sobre conjuntos de datos enteros. En este módulo, exploramos conceptos esenciales como las medidas de tendencia central y dispersión, que en conjunto nos ofrecen una imagen completa de cómo se comportan nuestros datos.
+
+### ¿Por Qué Es Importante la Representación de Datos?
+
+Representar los datos de forma clara y precisa permite:
+- **Visualizar las distribuciones:** Comprender dónde se concentran los datos y cómo se dispersan alrededor de un punto central.
+- **Tomar decisiones informadas:** Basar conclusiones y estrategias en análisis cuantitativos.
+- **Comunicar hallazgos:** Facilitar la presentación de resultados a audiencias técnicas y no técnicas.
+
+Además, es vital distinguir entre **población** y **muestra**. Por ejemplo, para estudiar la población de la Ciudad de México, analizar cada individuo es impracticable; en cambio, se selecciona una muestra representativa que permita inferir generalidades sobre toda la población.
+
+---
+
+## Población vs. Muestra: Diferencias en los Cálculos Estadísticos
+
+### Parámetros Poblacionales vs. Estadísticos Muestrales
+
+Cuando trabajamos con datos, diferenciamos entre parámetros poblacionales (que describen a toda la población) y estadísticas muestrales (que describen una muestra extraída de la población). Esta distinción es fundamental en el cálculo de medidas como la media, la varianza y la desviación estándar.
+
+#### Media
+- **Poblacional (μ):**  
+  \( \mu = \frac{\sum_{i=1}^{N} x_{i}}{N} \)  
+  Suma de todos los elementos dividido entre el tamaño total de la población.
+- **Muestral (\( \bar{x} \)):**  
+  \( \bar{x} = \frac{\sum_{i=1}^{n} x_{i}}{n} \)  
+  Suma de todos los elementos dividida entre el tamaño de la muestra.
+
+#### Varianza
+- **Poblacional (\( \sigma^2 \)):**  
+  \( \sigma^2 = \frac{\sum_{i=1}^{N} (x_{i} - \mu)^2}{N} \)
+- **Muestral (S²):**  
+  \( S^2 = \frac{\sum_{i=1}^{n} (x_{i} - \bar{x})^2}{n-1} \)  
+  La diferencia en el denominador (n-1 en lugar de n) corrige el sesgo en la estimación de la varianza.
+
+#### Desviación Estándar
+- Se define como la raíz cuadrada de la varianza.  
+  Para la población, es \( \sigma = \sqrt{\sigma^2} \), y para la muestra, \( S = \sqrt{S^2} \).
+
+---
+
+## Aplicando Fórmulas en Excel y Google Sheets
+
+Herramientas como **Excel** y **Google Sheets** facilitan enormemente estos cálculos, ya que disponen de fórmulas preconfiguradas que automatizan el proceso. Aquí te mostramos cómo puedes aplicar estos conceptos:
+
+### Cálculo de la Media
+- **Manual:** Sumar todos los valores (por ejemplo, la duración de las películas) y dividir por el número total de elementos.
+- **Automatizado:**  
+  - En **Excel:** `=PROMEDIO(rango)`
+  - En **Sheets:** `=AVERAGE(rango)`
+
+### Cálculo de la Varianza
+- **Manual:**  
+  1. Calcula la diferencia de cada valor respecto a la media.
+  2. Eleva cada diferencia al cuadrado.
+  3. Suma todas las diferencias al cuadrado.
+  4. Divide el total entre el tamaño (N) para la población o (n-1) para la muestra.
+- **Automatizado:**  
+  - **Poblacional:** `=VAR.P(rango)`
+  - **Muestral:** `=VAR.S(rango)`
+
+### Cálculo de la Desviación Estándar
+- **Automatizado:**  
+  - **Poblacional:** `=DESVPROM.P(rango)` o `=STDEVP(rango)`
+  - **Muestral:** `=DESVPROM.S(rango)` o `=STDEV.S(rango)`
+
+---
+
+## Implementación Práctica Paso a Paso
+
+Visualizar el proceso te ayudará a afianzar estos conceptos. Aquí te dejo unos pasos específicos para implementar estos cálculos en Excel o Sheets:
+
+1. **Abrir la Hoja de Cálculo:**  
+   Inicia Excel o Google Sheets y carga tu conjunto de datos (por ejemplo, la duración de las películas).
+
+2. **Seleccionar los Datos:**  
+   Identifica la columna de interés donde se encuentran tus datos.
+
+3. **Cálculo de la Media:**
+   - **Manual:**  
+     Inserta una fórmula que sume todos los valores y los divida por el número total.
+   - **Automatizado:**  
+     Escribe en una celda:  
+     - Excel: `=PROMEDIO(A2:A101)`  
+     - Sheets: `=AVERAGE(A2:A101)`
+
+4. **Cálculo de la Varianza:**
+   - **Automatizado:**  
+     Escribe en una celda:  
+     - Poblacional: `=VAR.P(A2:A101)`  
+     - Muestral: `=VAR.S(A2:A101)`
+
+5. **Cálculo de la Desviación Estándar:**
+   - **Automatizado:**  
+     Escribe en una celda:  
+     - Poblacional: `=DESVPROM.P(A2:A101)`  
+     - Muestral: `=DESVPROM.S(A2:A101)`
+
+---
+
+## Tu Reto: Practica con Diferentes Conjuntos de Datos
+
+Te invitamos a experimentar con distintos conjuntos de datos. Compara cómo varían las medidas cuando trabajas con parámetros poblacionales y estadísticos muestrales. Reflexiona sobre qué tan representativa es tu muestra respecto a la población y comparte tus hallazgos en los comentarios.
+
+El aprendizaje en estadística es un proceso continuo, y cada práctica te acerca a dominar el análisis de datos. ¡Explora, experimenta y nunca dejes de aprender!

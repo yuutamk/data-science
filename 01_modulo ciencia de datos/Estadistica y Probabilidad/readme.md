@@ -1271,3 +1271,337 @@ Utiliza la regla de la suma:
 3. Combina tus cálculos para obtener el resultado final.
 
 ¡Comparte tus resultados y no dudes en experimentar con diferentes escenarios! Con práctica, dominarás la regla de la suma y fortalecerás tu comprensión de la probabilidad, una herramienta esencial para el análisis y la toma de decisiones informadas.
+
+
+---
+
+# Probabilidad Condicional
+
+La **probabilidad condicional** es una herramienta fundamental en la estadística que permite evaluar la probabilidad de que ocurra un evento, teniendo en cuenta que otro evento ya se ha presentado. Esta medida es crucial para determinar la interdependencia entre sucesos y desarrollar estrategias en juegos de azar, así como para tomar decisiones informadas en la vida cotidiana.
+
+---
+
+### Calculando Probabilidades en Eventos Independientes
+
+Los **eventos independientes** son aquellos en los que la ocurrencia de un evento no afecta la probabilidad del siguiente. Un ejemplo clásico es el lanzamiento de una moneda: el resultado de un lanzamiento no influye en el resultado del siguiente. La regla de multiplicación para eventos independientes establece que la probabilidad de que dos eventos independientes, A y B, ocurran simultáneamente es el producto de sus probabilidades individuales.
+
+**Ejemplo con una moneda:**
+
+- **Probabilidad de obtener "cara" en un lanzamiento:** 1/2  
+- **Probabilidad de obtener "cara" en dos lanzamientos consecutivos:**  
+  \[
+  \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}
+  \]
+
+Un diagrama de árbol es una excelente forma de visualizar los posibles resultados al lanzar una moneda dos veces:  
+- Cara-Cara  
+- Cara-Cruz  
+- Cruz-Cara  
+- Cruz-Cruz  
+
+Sólo una de estas combinaciones cumple con la condición de obtener dos "caras" seguidas.
+
+---
+
+### Impacto de la Repetición en la Probabilidad
+
+Un error común es asumir que la probabilidad de éxito aumenta al repetir un evento exitoso. Por ejemplo, consideremos a un jugador de baloncesto que tiene una probabilidad de encestar del 70% en cada tiro. Utilizando la regla de multiplicación para eventos independientes, la probabilidad de encestar cinco tiros seguidos es:
+
+\[
+(0.7)^5 \approx 0.16807
+\]
+
+Aunque la probabilidad individual es alta, la probabilidad de lograr cinco éxitos consecutivos es considerablemente menor, lo que demuestra que la repetición no incrementa la probabilidad de éxito de un solo evento.
+
+---
+
+### Diferenciando Eventos Dependientes
+
+En contraste, los **eventos dependientes** se influyen mutuamente; el resultado de un evento afecta la probabilidad del siguiente. Un ejemplo es el juego de cartas. Si extraes una carta de una baraja, la composición de la baraja cambia y, por tanto, la probabilidad de extraer otra carta se modifica.
+
+**Ejemplo con cartas:**
+
+- **Baraja inicial:** 52 cartas  
+- **Probabilidad de sacar un as:** 4/52  
+- Si se saca un as, la baraja se reduce a 51 cartas, y la probabilidad de sacar un rey (suponiendo que no se ha alterado la cantidad de reyes) se vuelve 4/51.
+
+Esta variación en las probabilidades al realizar sucesivas extracciones ilustra cómo los eventos dependientes están interrelacionados.
+
+---
+
+### Reflexión Final
+
+Comprender la diferencia entre eventos independientes y dependientes es crucial para calcular la **probabilidad condicional** de forma efectiva. Este conocimiento permite ajustar nuestros cálculos cuando los eventos están interrelacionados, una habilidad que se profundizará en futuras clases mediante el teorema de Bayes.
+
+Explora este fascinante mundo de la probabilidad, experimenta con tus propios ejemplos y añade nuevas perspectivas a tus decisiones. ¡La práctica constante y la curiosidad te convertirán en un experto en el manejo de la incertidumbre!
+
+
+---
+
+
+[![Miniatura del video](https://img.youtube.com/vi/D7KKlC0LOyw/maxresdefault.jpg)](https://www.youtube.com/watch?v=D7KKlC0LOyw)
+
+## Teorema de Bayes: La Puerta a la Probabilidad Condicional
+
+El **Teorema de Bayes** es una herramienta fundamental en la probabilidad y la estadística que nos permite calcular la probabilidad de un evento basándonos en la información de eventos previos. Es decir, nos ayuda a evaluar la probabilidad de que ocurra un evento, dado que otro evento ya ha sucedido. Esta capacidad es vital para tomar decisiones informadas en situaciones de incertidumbre.
+
+---
+
+### ¿Cómo Funciona el Teorema de Bayes?
+
+El teorema se centra en la probabilidad condicional. Su fórmula es:
+
+```
+P(A|B) = (P(B|A) * P(A)) / P(B)
+```
+
+- **P(A|B):** Probabilidad de que ocurra el evento A dado que ha ocurrido el evento B.
+- **P(B|A):** Probabilidad de que ocurra el evento B dado que ha ocurrido el evento A.
+- **P(A):** Probabilidad inicial del evento A.
+- **P(B):** Probabilidad de que ocurra el evento B.
+
+---
+
+### Ejemplo Práctico: Dados Justo y Cargado
+
+Imagina que tienes dos dados:
+- **Dado justo:** Cada cara (1, 2, 3, 4, 5, 6) tiene la misma probabilidad, 1/6.
+- **Dado cargado:** Tiene un 50% de probabilidad de mostrar un 6, mientras que los números del 1 al 5 comparten el otro 50%.
+
+**Escenario:**  
+Se elige al azar uno de los dos dados (con probabilidad 1/2 cada uno) y se lanza, obteniendo un 6.
+
+**Para calcular la probabilidad de que se haya usado el dado cargado (evento A) dado que se obtuvo un 6 (evento B):**
+
+- **P(A):** Probabilidad de elegir el dado cargado = 1/2.
+- **P(B|A):** Probabilidad de obtener un 6 con el dado cargado = 1/2.
+- **P(B):** Probabilidad total de obtener un 6.  
+  Para calcular P(B), se evalúan ambas opciones. Usando el mínimo común múltiplo (30) para nivelar las probabilidades, se determina que P(B) = 1/3.
+
+**Aplicando el teorema:**
+
+\[
+P(\text{cargado}|6) = \frac{P(6|\text{cargado}) \times P(\text{cargado})}{P(6)} = \frac{\left(\frac{1}{2}\right) \times \left(\frac{1}{2}\right)}{\frac{1}{3}} = \frac{\frac{1}{4}}{\frac{1}{3}} = \frac{3}{4} = 0.75 \quad (75\%)
+\]
+
+Así, la probabilidad de que el dado sea cargado, habiendo obtenido un 6, es del 75%.
+
+---
+
+### Aplicaciones y Práctica
+
+El Teorema de Bayes se utiliza en múltiples campos, desde la economía hasta la medicina y la informática, para mejorar modelos predictivos y tomar decisiones basadas en evidencia. Algunas aplicaciones incluyen:
+
+- **Diagnósticos médicos:** Evaluar la probabilidad de una enfermedad dado un resultado de prueba.
+- **Sistemas de recomendación:** Mejorar la personalización de contenidos basándose en el comportamiento previo del usuario.
+- **Análisis de riesgo:** Estimar la probabilidad de eventos adversos en distintos escenarios.
+
+Para dominar este teorema, te recomiendo practicar con problemas variados y ejercicios que te desafíen a aplicar este enfoque. Cada problema te ayudará a afinar tu comprensión y a descubrir nuevas aplicaciones en el mundo real.
+
+¡Sigue explorando este fascinante mundo de la probabilidad y añade un nuevo enfoque a tus decisiones!
+
+
+---
+
+## Permutaciones y Combinaciones: Orden y Selección en la Probabilidad
+
+En el mundo de la probabilidad, diferenciar entre permutaciones y combinaciones es fundamental para abordar problemas cotidianos con precisión. Aplicar correctamente estos conceptos puede marcar la diferencia entre un cálculo exacto y uno erróneo. Mientras que las **permutaciones** se centran en el orden exacto de los elementos, las **combinaciones** se enfocan únicamente en la selección de elementos, sin importar el orden.
+
+---
+
+### ¿Qué es una Permutación y Cómo se Calcula?
+
+Las **permutaciones** son métodos para ordenar un conjunto específico de elementos. Se utilizan cuando el orden de los elementos es importante.
+
+#### Fórmula de Permutación
+
+La fórmula esencial para calcular la permutación de \( K \) elementos en un conjunto de tamaño \( N \) es:
+
+\[
+P(N, K) = \frac{N!}{(N-K)!}
+\]
+
+Esta fórmula utiliza el concepto de **factorial**, que es la multiplicación de todos los números enteros positivos hasta \( N \). Por ejemplo, \( 4! = 4 \times 3 \times 2 \times 1 = 24 \).
+
+#### Ejemplo Práctico con Cartas
+
+Imagina que tienes los cuatro reyes de un mazo de cartas (N = 4): Rey de picas, Rey de diamantes, Rey de tréboles y Rey de corazones. Si deseas calcular las permutaciones de elegir 3 reyes, el orden en el que se ubiquen es crucial. Aplicando la fórmula:
+
+\[
+P(4, 3) = \frac{4!}{(4-3)!} = \frac{4 \times 3 \times 2 \times 1}{1!} = \frac{24}{1} = 24
+\]
+
+Esto significa que existen 24 formas distintas de ordenar 3 reyes de entre 4.
+
+---
+
+### ¿Cómo se Diferencia una Combinación?
+
+A diferencia de las permutaciones, las **combinaciones** no consideran el orden. Se centran únicamente en la selección de un subconjunto de elementos de un conjunto mayor.
+
+#### Fórmula de Combinación
+
+La fórmula para calcular la combinación de \( K \) elementos dentro de un grupo de \( N \) es:
+
+\[
+C(N, K) = \frac{N!}{K!(N-K)!}
+\]
+
+Esta fórmula descarta el orden, haciendo que el número total de combinaciones sea generalmente mucho menor que el de permutaciones.
+
+#### Aplicación en el Ejemplo de los Reyes
+
+Utilizando nuevamente el ejemplo de los reyes, cuando seleccionas 3 reyes de un conjunto de 4, la combinación es:
+
+\[
+C(4, 3) = \frac{4!}{3!(4-3)!} = \frac{24}{6 \times 1} = \frac{24}{6} = 4
+\]
+
+Así, independientemente del orden, sólo existen 4 combinaciones únicas de 3 reyes.
+
+---
+
+### Reto y Práctica Recomendada
+
+Practicar estos conceptos es esencial para fortalecer tu comprensión. Te invito a que intentes calcular tanto la permutación como la combinación de seleccionar 3 reyes de un conjunto de 4.  
+- **Permutación:** ¿Cuántos órdenes distintos puedes obtener?  
+- **Combinación:** ¿Cuántos grupos únicos se pueden formar?
+
+Comparar tus resultados con los cálculos teóricos te ayudará a afianzar estos conceptos y a apreciar la diferencia clave entre ordenar y seleccionar.
+
+¡Adelante! Comparte tus hallazgos, discute con otros y sigue explorando el fascinante mundo de la probabilidad. Cada ejercicio es una oportunidad para profundizar en el conocimiento y mejorar tus habilidades en el análisis de datos.
+
+
+---
+
+
+## Correlación vs. Causalidad: Interpretando Relaciones en Datos
+
+La estadística es una herramienta poderosa que nos permite analizar la relación entre dos variables. Sin embargo, es fundamental diferenciar entre **correlación** y **causalidad** para evitar conclusiones erróneas en nuestros análisis.
+
+---
+
+### ¿Qué es la Correlación?
+
+La correlación indica que dos variables muestran un comportamiento similar o relacionado. Es decir, cuando una variable cambia, la otra también tiende a cambiar de manera predecible. Para detectar una correlación se utilizan gráficos que comparan las distribuciones de datos, lo que facilita la identificación de patrones y comportamientos similares.  
+**Importante:** Una correlación puede ser producto de coincidencias o de factores no considerados en el análisis.
+
+---
+
+### ¿Puede una Correlación Implicar Causalidad?
+
+Aunque a menudo vemos correlaciones en los datos, **correlación no significa causalidad**. Un ejemplo claro es el de las horas de sueño y el cansancio: dormir menos horas causa que te sientas más cansado. En este caso, se observa una correlación que también es causal, ya que existe una relación directa entre la causa (menos horas de sueño) y el efecto (más cansancio).
+
+---
+
+### Ejemplos Curiosos de Correlación Sin Causalidad
+
+Para comprender mejor la diferencia, veamos algunos ejemplos curiosos donde se observa correlación pero no hay una relación causal directa:
+
+- **Ventas de Arcade y Doctorados:**  
+  Una gráfica muestra que las ventas de máquinas Arcade en Estados Unidos y la cantidad de doctorados en un mismo año siguen un patrón similar a lo largo del tiempo. Sin embargo, es absurdo pensar que aumentar las ventas de Arcades provoque un incremento en los doctorados en ciencias de la computación.
+
+- **Queso Mozzarella e Ingeniería Civil:**  
+  Se puede observar una similitud en la evolución del consumo de queso mozzarella y la cantidad de doctorados en ingeniería civil. Aun así, concluir que consumir más queso mozzarella aumenta las probabilidades de obtener un doctorado en ingeniería civil sería un error.
+
+- **Pollo y Petróleo:**  
+  Otro caso peculiar es la correlación entre el consumo de pollo en Estados Unidos y las importaciones de petróleo. Aunque ambas variables presentan distribuciones similares, es evidente que el aumento del consumo de pollo no causa que Estados Unidos importe más petróleo.
+
+---
+
+### La Importancia de Distinguir Correlación y Causalidad
+
+Cuando analizamos datos, distinguir entre correlación y causalidad es vital para no caer en conclusiones equivocadas. Comprender esta diferencia nos permite ser críticos con los datos, evitando inferencias erróneas y tomando decisiones basadas en evidencia real.  
+La próxima vez que observes una gráfica que muestre una tendencia similar entre dos variables, cuestiona si realmente existe un efecto causal o si se trata de una correlación aparente.
+
+Aprender a interpretar los datos correctamente te ayudará a tomar decisiones informadas y a profundizar en el fascinante mundo del análisis estadístico. ¡Sigue explorando y mejorando tus habilidades para convertir la información en conocimiento valioso!
+
+
+---
+
+
+## Gráficos de Dispersión: Descubriendo Relaciones en los Datos
+
+Los gráficos de dispersión son herramientas visuales imprescindibles en el análisis de datos. Permiten observar la relación entre dos variables al representar cada par de datos como un punto en un sistema de coordenadas. Esta representación facilita la identificación de tendencias, patrones y valores atípicos, proporcionando una vista clara de cómo una variable puede influir o correlacionarse con otra.
+
+---
+
+### ¿Qué es un Gráfico de Dispersión?
+
+Un gráfico de dispersión muestra puntos que representan pares de datos, donde una variable se asigna al eje X y la otra al eje Y. Cada punto brinda una mirada específica sobre la posible relación entre las dos variables. Esta técnica es ideal para analizar conjuntos de datos complejos y detectar patrones de correlación.
+
+---
+
+### ¿Cómo se Interpreta un Gráfico de Dispersión?
+
+Para interpretar adecuadamente un gráfico de dispersión, es importante considerar varios aspectos:
+
+- **Forma:**  
+  La disposición de los puntos puede sugerir distintos tipos de relaciones. Una alineación casi recta indica una relación lineal, mientras que una curva parabólica sugiere una relación cuadrática.
+
+- **Dirección:**  
+  Se observa si la relación es positiva (ambas variables aumentan juntas) o negativa (una variable aumenta mientras la otra disminuye).
+
+- **Fuerza:**  
+  La cercanía de los puntos a una línea imaginaria de tendencia determina la fuerza de la relación. Puntos muy concentrados indican una relación fuerte, mientras que una dispersión amplia señala una relación débil.
+
+- **Valores Atípicos:**  
+  Aquellos puntos que se alejan significativamente del patrón general pueden ser valores atípicos, y es importante examinarlos para entender su impacto en el análisis.
+
+---
+
+### Identificando la Regresión en un Gráfico de Dispersión
+
+La **regresión** en un gráfico de dispersión implica ajustar una línea que represente de manera óptima la relación entre las variables. Esta línea, denominada línea de regresión, facilita la identificación de tendencias y permite hacer predicciones.  
+- **Línea de Regresión:**  
+  Puede ser recta (para relaciones lineales) o curva (para relaciones no lineales).  
+- **Coeficiente de Determinación (R²):**  
+  Este valor indica la precisión del ajuste de la línea. Un R² cercano a 1 sugiere una relación muy fuerte, mientras que un valor cercano a 0 indica una relación débil o inexistente.
+
+---
+
+### Generando Gráficos de Dispersión en Hojas de Cálculo
+
+Herramientas como Google Sheets y Excel ofrecen opciones potentes para crear gráficos de dispersión, permitiendo un análisis rápido y visual de los datos.
+
+**Pasos para Crear un Gráfico de Dispersión:**
+
+1. **Seleccionar Datos:**  
+   Identifica las columnas que deseas comparar. Normalmente, una columna se asigna al eje X y la otra al eje Y.
+
+2. **Insertar Gráfico:**  
+   Utiliza la opción de "Insertar gráfico" y selecciona "Gráfico de dispersión" en el menú. La herramienta generará automáticamente el gráfico basado en tus datos.
+
+3. **Añadir Línea de Tendencia:**  
+   Personaliza el gráfico agregando una línea de tendencia desde las opciones de personalización (por ejemplo, seleccionando "Serie" y luego "Línea de tendencia").
+
+4. **Evaluar R²:**  
+   Activa la opción para mostrar el coeficiente de determinación en el gráfico, lo que te ayudará a evaluar la fuerza de la relación.
+
+---
+
+### Caso de Estudio: Comparando Felicidad y Economía
+
+Imagina analizar variables como la esperanza de vida y el score de felicidad de diferentes países. Al graficar estos datos en un gráfico de dispersión, podrías observar:
+
+- **Tendencia:**  
+  Si los puntos se agrupan en una línea ascendente, se sugiere una relación positiva: a medida que aumenta la esperanza de vida, también lo hace el score de felicidad.
+
+- **Dirección y Fuerza:**  
+  La dirección te indicará si la relación es positiva o negativa, mientras que la fuerza (evaluada por R²) te permitirá ver qué tan cerca están los puntos de la línea de tendencia.
+
+- **Valores Atípicos:**  
+  Puntos que se alejan del patrón general pueden indicar casos excepcionales o errores en los datos, que merecen un análisis más profundo.
+
+---
+
+### ¿Qué Nos Dicen los Gráficos de Dispersión?
+
+Los gráficos de dispersión son vitales para:
+- Determinar relaciones entre variables y prever comportamientos futuros.
+- Identificar y analizar valores atípicos que podrían distorsionar el análisis.
+- Probar teorías y explorar correlaciones especuladas entre variables.
+
+Experimentar con gráficos de dispersión y líneas de tendencia en hojas de cálculo no solo mejora la comprensión de los datos, sino que también te permite realizar análisis más profesionales y precisos. Cada conjunto de datos es una nueva oportunidad para descubrir historias ocultas y tomar decisiones informadas.
+
+¡Sigue explorando el fascinante mundo de los análisis de datos y conviértete en un experto en interpretación visual!

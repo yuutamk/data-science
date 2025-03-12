@@ -400,6 +400,7 @@ Python ofrece muchas funcionalidades avanzadas para trabajar con conjuntos. Pued
 
 
 
+[Python Set Methods](https://www.w3schools.com/python/python_ref_set.asp)
 
 
 ¡Sigue explorando y perfeccionando tus habilidades en Python para descubrir aún más formas de trabajar con datos y optimizar tus programas!

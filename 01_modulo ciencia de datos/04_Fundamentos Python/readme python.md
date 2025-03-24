@@ -405,3 +405,196 @@ Python ofrece muchas funcionalidades avanzadas para trabajar con conjuntos. Pued
 
 ¡Sigue explorando y perfeccionando tus habilidades en Python para descubrir aún más formas de trabajar con datos y optimizar tus programas!
 
+---
+
+# Funciones
+
+## 🔮 Creando una Función en Python  
+
+Para invocar una función, usamos la palabra clave `def`, seguida de un nombre creativo y parámetros (si los necesitas). ¡Veamos un ejemplo!  
+
+```python  
+def duplicar_mensaje(mensaje):  
+    print(mensaje * 2)  
+```  
+
+Esta función, `duplicar_mensaje`, toma un texto y lo imprime dos veces. Por ejemplo, si lanzas `duplicar_mensaje("Hola")`, el resultado será `HolaHola`. ¡Abracadabra!  
+
+---
+
+## 🎩 ¿Cómo Usar Tus Funciones?  
+
+Una vez definida tu función, puedes llamarla cuantas veces quieras:  
+
+```python  
+duplicar_mensaje("¡A programar! ")  # Salida: ¡A programar! ¡A programar!  
+duplicar_mensaje("Python ")         # Salida: Python Python  
+```  
+
+¡Sin repetir código! Cada llamada ejecuta el bloque mágico que creaste.  
+
+---
+
+## 🔢 Funciones con Múltiples Parámetros  
+
+¿Y si necesitas que tu hechizo maneje más de un ingrediente? Las funciones pueden recibir **tantos parámetros como necesites**. Por ejemplo, una función para sumar números:  
+
+```python  
+def sumar_numeros(num1, num2):  
+    print(num1 + num2)  
+```  
+
+Al llamar `sumar_numeros(3, 5)`, ¡obtendrás `8` en tu consola!  
+
+---
+
+## 🌀 Funciones que Usan Otras Funciones  
+
+La verdadera magia surge cuando mezclas funciones. Imagina que quieres duplicar el resultado de una suma:  
+
+```python  
+def duplicar_mensaje(mensaje):  
+    print(mensaje * 2)  
+
+def sumar_y_duplicar(a, b):  
+    resultado_suma = a + b  
+    duplicar_mensaje(resultado_suma)  
+```  
+
+Si ejecutas `sumar_y_duplicar(2, 4)`, la suma (6) se duplicará, mostrando `12`. ¡Cooperación entre funciones!  
+
+---
+
+## 🌟 Los Tesoros que Ofrecen las Funciones  
+
+### 🧰 **Código Reutilizable**  
+Olvídate de copiar y pegar. ¡Una función bien hecha es como una herramienta que usas para siempre!  
+
+### 🛠️ **Mantenimiento Sin Dolor**  
+¿Necesitas corregir un error? Modifica la función una vez, y todos los lugares donde se usa se actualizarán.  
+
+### 📖 **Código Legible**  
+Un nombre descriptivo (como `calcular_promedio`) explica lo que hace el código sin necesidad de comentarios.  
+
+### 🎭 **Flexibilidad Creativa**  
+Usa parámetros variables, combina funciones, ¡y adapta tu código a cualquier desafío!  
+
+
+```python  
+# ¿Listo para crear tu propio hechizo?  
+def crear_magia():  
+    print("✨ ¡Tu código ahora es mágico! ✨")  
+
+crear_magia()  
+```  
+
+¡Atrévete a experimentar y verás cómo tu código cobra vida! 🐍💫
+
+
+Aquí tienes la versión ajustada:
+
+---
+
+# Funciones que retornan valores en Python
+## ¿Qué son y por qué son útiles?  
+Las funciones que devuelven valores son herramientas esenciales para organizar y optimizar tu código. Permiten encapsular operaciones específicas, ejecutarlas cuando sea necesario, y obtener resultados que pueden usarse en otras partes del programa.  
+
+---
+
+## Creando una función para sumar rangos numéricos  
+Este ejemplo demuestra cómo crear una función flexible para sumar números dentro de un rango personalizado:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+def suma_con_rango(minimo, maximo):
+    suma = 0
+    for x in range(minimo, maximo + 1):
+        suma += x
+    return suma
+```
+</div>
+<br>  
+
+---
+
+## Cómo utilizar la función en diferentes escenarios  
+Una vez definida, puedes reutilizar la función con distintos parámetros:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+resultado1 = suma_con_rango(1, 10)
+print(f"Suma del 1 al 10: {resultado1}")  # Resultado: 55
+
+resultado2 = suma_con_rango(20, 30)
+print(f"Suma del 20 al 30: {resultado2}")  # Resultado: 275
+```
+</div>
+<br>  
+
+---
+
+## 4 Beneficios clave de estas funciones  
+1. **Reutilización inteligente**: Ejecuta la misma lógica con diferentes datos  
+2. **Código modular**: Divide problemas complejos en partes manejables  
+3. **Actualizaciones sencillas**: Modifica la función una vez para afectar todos sus usos  
+4. **Mayor claridad**: Nombres descriptivos hacen el código más comprensible  
+
+---
+
+## Cómo almacenar y usar los resultados  
+El verdadero potencial está en guardar los valores devueltos para usarlos posteriormente:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+total = suma_con_rango(5, 15)
+porcentaje = total * 0.20
+print(f"20% del total: {porcentaje}")
+```
+</div>
+<br>  
+
+---
+
+## Combinando funciones para operaciones complejas  
+Los resultados pueden convertirse en entradas para nuevas operaciones:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+  
+```python
+primera_suma = suma_con_rango(1, 5)
+segunda_suma = suma_con_rango(primera_suma, primera_suma + 3)
+print(f"Resultado final: {segunda_suma}")  # Usa el 15 (resultado de 1-5) como nuevo mínimo
+```
+</div>
+<br>  
+
+---
+
+**Consejo final**: Empieza con funciones simples y ve conectándolas gradualmente. Verás cómo tu código gana en eficiencia y organización sin esfuerzo. ¡El poder está en la práctica constante!

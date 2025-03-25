@@ -598,3 +598,194 @@ print(f"Resultado final: {segunda_suma}")  # Usa el 15 (resultado de 1-5) como n
 ---
 
 **Consejo final**: Empieza con funciones simples y ve conectándolas gradualmente. Verás cómo tu código gana en eficiencia y organización sin esfuerzo. ¡El poder está en la práctica constante!
+
+---
+
+# Funciones que retornan valores en Python: Desde lo básico hasta múltiples retornos  
+
+## ¿Qué son y cómo definirlas?  
+Las funciones que devuelven valores nos permiten encapsular operaciones y obtener resultados específicos. Aquí un ejemplo para calcular el volumen de un objeto:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+def volumen(length, width, depth):
+    return length * width * depth
+```
+</div>
+<br>  
+
+**Uso básico:**  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+result = volumen(10, 20, 3)
+print(result)  # Output: 600
+```
+</div>
+<br>  
+
+---
+
+## Parámetros con valores predeterminados  
+Python permite definir valores por defecto para mayor flexibilidad:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+def volumen(length=1, width=1, depth=1):
+    return length * width * depth
+
+# Usando solo un parámetro personalizado
+result = volumen(width=10)
+print(result)  # Output: 10 (1*10*1)
+```
+</div>
+<br>  
+
+---
+
+## Retornando múltiples valores  
+Python permite devolver varios resultados usando tuplas:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+def volumen(length, width, depth):
+    calculated_volume = length * width * depth
+    return calculated_volume, width, "hola"
+
+# Obteniendo y usando la tupla completa
+result = volumen(10, 20, 3)
+print(result)  # Output: (600, 20, 'hola')
+```
+</div>
+<br>  
+
+---
+
+## Descomponiendo los resultados  
+Podemos extraer valores individuales de la tupla retornada:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+volume, width, greeting = volumen(10, 20, 3)
+print(f"Volumen: {volume}, Ancho: {width}, Saludo: {greeting}")
+# Output: Volumen: 600, Ancho: 20, Saludo: hola
+```
+</div>
+<br>  
+
+---
+
+### 3 Ventajas Clave:  
+1. **Personalización**: Parámetros con valores por defecto adaptan la función a distintos casos  
+2. **Versatilidad**: Retornar múltiples valores simplifica el flujo de datos  
+3. **Organización**: La descomposición de tuplas hace el código más legible  
+
+**Consejo práctico**: Combina parámetros predeterminados con retornos múltiples para crear funciones flexibles y poderosas. ¡Experimenta con diferentes combinaciones!
+
+---
+
+# Scope en Python: Alcance de Variables  
+
+## ¿Qué es y por qué es importante?  
+El scope (alcance) determina dónde y cómo pueden usarse las variables o funciones en un programa. Es clave para evitar conflictos entre datos y mantener el código organizado.  
+
+---
+
+## Tipos de Scope  
+1. **Local**: Variables declaradas dentro de una función. Solo existen ahí.  
+2. **Enclosing**: Variables en funciones anidadas (exteriores a una función interna).  
+3. **Global**: Accesibles en todo el programa.  
+4. **Built-in**: Palabras reservadas y funciones integradas del lenguaje.  
+
+---
+
+## Ejemplo Práctico: Global vs Local  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+precio_global = 100  # Variable global
+
+def calcular_aumento():
+    precio_local = 200  # Variable local
+    return precio_local + 10
+
+print(precio_global)        # Output: 100
+print(calcular_aumento())   # Output: 210
+```
+</div>
+<br>  
+
+---
+
+## Errores Frecuentes  
+
+### 1. Acceder a variables locales fuera de su contexto  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+def funcion_problematica():
+    variable_local = 50
+
+print(variable_local)
+```
+</div>
+<br>  
+
+---
+#  👉**Playground Refactor Game**👈
+
+
+Refactoriza el juego de piedra papel o tijera ahora con funciones:
+
+[piedra papel o tijera.py](./Class/05_funciones/04_refactor/01_origin-piedra-papel-tijera.py)
+
+# 👉**Tienda de Tecnología**👈
+
+Playgraund [Tienda de Tecnología](./Playgraunds/Tienda-de-Tecnologia/readme.md)

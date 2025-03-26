@@ -789,3 +789,424 @@ Refactoriza el juego de piedra papel o tijera ahora con funciones:
 # 👉**Tienda de Tecnología**👈
 
 Playgraund [Tienda de Tecnología](./Playgraunds/Tienda-de-Tecnologia/readme.md)
+
+---
+
+
+# Funciones Lambda en Python: Simplificando tu Código  
+
+## ¿Para qué sirven y cómo se usan?  
+Las funciones lambda son herramientas para crear operaciones simples en una sola línea. Ideales cuando necesitas funciones rápidas sin la formalidad de `def`.  
+
+---
+
+## Transformando una función tradicional a lambda  
+### Versión con `def`  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+def increment(x):
+    return x + 1
+```
+</div>
+<br>  
+
+### Versión lambda equivalente  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+increment_v2 = lambda x: x + 1
+```
+</div>
+<br>  
+
+**Uso práctico:**  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+print(increment_v2(10))  # Resultado: 11
+```
+</div>
+<br>  
+
+---
+
+## Trabajando con múltiples parámetros  
+Ejemplo para formatear nombres completos:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+formatear_nombre = lambda nombre, apellido: f"{nombre.capitalize()} {apellido.capitalize()}"
+print(formatear_nombre('juan', 'pérez'))  # Output: Juan Pérez
+```
+</div>
+<br>  
+
+---
+
+## Asignación y reutilización  
+Las lambdas pueden guardarse en variables para usarlas repetidamente:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+multiplicar = lambda a, b: a * b
+print(multiplicar(5, 3))  # Output: 15
+```
+</div>
+<br>  
+
+---
+
+### 3 Beneficios Clave:  
+1. **Sintaxis concisa**: Ideales para operaciones de una línea  
+2. **Sin nombres permanentes**: Útiles para funciones temporales  
+3. **Integración con otras funciones**: Perfectas para `map()`, `filter()`, etc.  
+
+**Consejo**: Usa lambdas para tareas simples. Si la lógica crece, prefiere funciones tradicionales con `def`.  
+
+![Lambda](./Assets/img/lambda.gif)
+---
+
+## Ejemplo Final: Combinación con Funciones  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# Filtrar números pares usando lambda
+numeros = [1, 2, 3, 4, 5]
+pares = list(filter(lambda x: x % 2 == 0, numeros))
+print(pares)  # Output: [2, 4]
+```
+</div>
+<br>  
+
+**¡Domina las lambdas y lleva tu código al siguiente nivel!** 🚀
+
+
+---
+
+# Funciones de Orden Superior
+
+## ¿Qué son y cómo funcionan?  
+Las funciones de orden superior (HOF) son aquellas que pueden recibir otras funciones como parámetros o devolverlas como resultado. Esto permite crear soluciones flexibles y modulares.  
+
+---
+
+## Ejemplo Básico  
+### Función clásica + HOF  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+def incrementar(x):
+    return x + 1
+
+def hof(x, funcion):
+    return x + funcion(x)
+
+resultado = hof(2, incrementar)
+print(resultado)  # Output: 5 (2 + incrementar(2)=3 → 2+3=5)
+```
+</div>
+<br>  
+
+---
+
+## Integrando Funciones Lambda  
+Las lambdas simplifican el uso de HOF al evitar definir funciones completas:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# Versión con lambda
+hof_lambda = lambda x, func: x + func(x)
+resultado = hof_lambda(2, lambda x: x + 1)
+print(resultado)  # Output: 5
+```
+</div>
+<br>  
+
+---
+
+### 3 Ventajas de Usar Lambdas con HOF  
+1. **Código compacto**: Define la lógica directamente donde se usa  
+2. **Menos variables**: Evita declarar funciones con `def` para operaciones simples  
+3. **Dinamismo**: Cambia el comportamiento de la HOF al vuelo  
+
+---
+
+## Casos de Uso Ideales  
+- **Transformar datos**: Aplicar operaciones a listas (ej: multiplicar todos los elementos por 2)  
+- **Filtrar información**: Seleccionar elementos que cumplan cierta condición  
+- **Personalizar comportamientos**: Modificar cómo funciona una función según el contexto  
+
+---
+
+## Ejemplo Avanzado: Uso Directo de Lambda  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+resultado = hof_lambda(2, lambda x: x * 3)
+print(resultado)  # Output: 8 (2 + (2*3)=6 → 2+6=8)
+```
+</div>
+<br>  
+
+---
+
+## ¿Qué Aprender Después?  
+Las HOF son la base para funciones integradas como `map()`, `filter()`, y `reduce()`. Por ejemplo:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+numeros = [1, 2, 3]
+duplicados = list(map(lambda x: x * 2, numeros))
+print(duplicados)  # Output: [2, 4, 6]
+```
+</div>
+<br>  
+
+**Consejo**: Practica creando tus propias HOF y combinándolas con lambdas para dominar estos conceptos. 🚀
+
+---
+
+# Función Map en Python: Transformación Eficiente de Listas  
+
+## ¿Qué hace y cómo funciona?  
+La función `map` aplica una operación a cada elemento de una lista, generando una nueva lista con los resultados. Mantiene la misma cantidad de elementos pero transformados.  
+
+---
+
+## Uso Básico: Multiplicar Elementos  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+numeros = [1, 2, 3, 4]
+
+# Duplicar cada elemento con map + lambda
+resultado = list(map(lambda x: x * 2, numeros))
+
+print(resultado)  # Output: [2, 4, 6, 8]
+```
+</div>
+<br>  
+
+---
+
+## Operando Entre Dos Listas  
+Combina elementos de dos listas posición por posición:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+lista_a = [1, 2, 3]
+lista_b = [4, 5, 6, 7]
+
+suma = list(map(lambda a, b: a + b, lista_a, lista_b))
+print(suma)  # Output: [5, 7, 9] (Se detiene en el índice 2)
+```
+</div>
+<br>  
+
+---
+
+## Consideraciones Clave  
+1. **Longitud de listas**: `map` procesa hasta el final de la lista más corta.  
+2. **Tipos de datos**: Funciona con cualquier iterable (tuplas, conjuntos, etc.).  
+3. **Eficiencia**: Es más rápido que un bucle `for` tradicional para operaciones simples.  
+
+---
+
+## Ejemplo Práctico: Transformar Textos  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+palabras = ["vaca", "pollo", "maíz"]
+transformadas = list(map(lambda x: x.capitalize(), palabras))
+
+print(transformadas)  # Output: ['Vaca', 'Pollo', 'Maíz']
+```
+</div>
+<br>  
+
+---
+
+### ¿Cuándo Usar Map?  
+- **Transformaciones en masa**: Cambiar formatos, cálculos matemáticos, etc.  
+- **Integración con otras funciones**: Perfecto para combinar con `filter` o `reduce`.  
+- **Código limpio**: Evita bucles explícitos cuando la lógica es simple.  
+
+**Consejo**: Combina `map` con funciones lambda para operaciones rápidas, pero usa funciones definidas (`def`) si la lógica es compleja.  
+
+---
+
+**¡Experimenta con `map` y descubre cómo simplifica tu manipulación de datos!** 🚀
+
+---
+
+# Método Filter en Python: Filtra Datos con Precisión  
+
+## ¿Cómo funciona y para qué sirve?  
+El método `filter` permite seleccionar elementos de una lista que cumplen una condición específica, creando una nueva lista con ellos. Ideal para extraer información relevante sin modificar los datos originales.  
+
+---
+
+## Filtrado Básico: Números Pares  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+numeros = [1, 2, 3, 4, 5, 6]
+
+pares = list(filter(lambda x: x % 2 == 0, numeros))
+print(pares)  # Output: [2, 4, 6]
+```
+</div>
+<br>  
+
+---
+
+## Filtrado en Estructuras Complejas: Diccionarios  
+Ejemplo para seleccionar partidos ganados por equipos locales:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+partidos = [
+    {"equipo_local": "Bolivia", "resultado": "victoria"},
+    {"equipo_local": "Argentina", "resultado": "empate"},
+    {"equipo_local": "Perú", "resultado": "victoria"}
+]
+
+victorias = list(filter(lambda p: p['resultado'] == 'victoria', partidos))
+print(victorias)  # Muestra solo los diccionarios con 'victoria'
+```
+</div>
+<br>  
+
+---
+
+## Consideraciones Importantes  
+1. **Lista original intacta**: Siempre genera una nueva lista  
+2. **Resultado iterable**: Necesitas convertir a lista con `list()`  
+3. **Cantidad variable**: La nueva lista puede tener menos elementos o ninguno  
+4. **Condiciones claras**: Asegúrate que la lógica del filtro sea precisa  
+
+---
+
+### Casos de Uso Comunes  
+- **Datos numéricos**: Filtrar rangos, múltiplos, o valores atípicos  
+- **Textos**: Seleccionar palabras con ciertas características  
+- **Datos estructurados**: Filtrar registros en listas de diccionarios  
+
+---
+
+## Ejemplo Avanzado: Filtros Anidados  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# Filtrar números pares mayores a 4
+numeros = [2, 5, 8, 3, 10]
+filtrados = list(filter(lambda x: x % 2 == 0 and x > 4, numeros))
+print(filtrados)  # Output: [8, 10]
+```
+</div>
+<br>  
+
+**Consejo**: Combina `filter` con `map` para transformar y filtrar datos en un solo flujo.  
+
+---
+
+**¡Domina el filtrado de datos y lleva tu manipulación de listas al siguiente nivel!** 🔍🐍

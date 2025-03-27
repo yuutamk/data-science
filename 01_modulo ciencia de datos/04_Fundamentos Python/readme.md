@@ -1210,3 +1210,532 @@ print(filtrados)  # Output: [8, 10]
 ---
 
 **¡Domina el filtrado de datos y lleva tu manipulación de listas al siguiente nivel!** 🔍🐍
+
+---
+
+# Función Reduce en Python: Acumulación de Datos Simplificada  
+
+## ¿Qué es y para qué sirve?  
+La función `reduce` procesa una lista para generar un único resultado acumulativo. Ideal para sumatorias, productos máximos, o cualquier operación que combine elementos secuencialmente.  
+
+---
+
+## Implementación Paso a Paso  
+### Requisito: Importar `functools`  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+import functools
+
+numeros = [1, 2, 3, 4]
+
+# Sumar todos los elementos
+resultado = functools.reduce(lambda acumulado, item: acumulado + item, numeros)
+print(resultado)  # Output: 10
+```
+</div>
+<br>  
+
+---
+
+## Desglose de Iteraciones  
+### Visualizando el proceso interno  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+def acumulador(acumulado, item):
+    print(f"Acumulado: {acumulado} | Item actual: {item}")
+    return acumulado + item
+
+resultado = functools.reduce(acumulador, numeros)
+# Output paso a paso:
+# Acumulado: 1 | Item actual: 2 → 3
+# Acumulado: 3 | Item actual: 3 → 6
+# Acumulado: 6 | Item actual: 4 → 10
+```
+</div>
+<br>  
+
+---
+
+## 3 Ventajas Clave de Reduce  
+1. **Código conciso**: Reemplaza bucles `for` con una sola línea  
+2. **Flexibilidad**: Funciona con cualquier operación acumulativa (suma, multiplicación, concatenación)  
+3. **Legibilidad**: Claridad al expresar la intención del código  
+
+---
+
+## Ejemplo Avanzado: Encontrar el Máximo  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+valores = [15, 8, 22, 3, 9]
+maximo = functools.reduce(lambda a, b: a if a > b else b, valores)
+print(maximo)  # Output: 22
+```
+</div>
+<br>  
+
+---
+
+### ¿Cuándo Evitar Reduce?  
+- **Listas vacías**: Genera error si no se provee un valor inicial (`initializer`).  
+- **Lógica compleja**: Si la operación requiere múltiples pasos, mejor usar bucles.  
+
+---
+
+**Consejo Final**: Combina `reduce` con `map` y `filter` para flujos de datos potentes. Por ejemplo, filtrar números negativos y luego sumarlos:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+datos = [5, -3, 10, -8, 2]
+suma_positivos = functools.reduce(
+    lambda a, b: a + b,
+    filter(lambda x: x > 0, datos),
+    0  # Valor inicial para evitar errores
+)
+print(suma_positivos)  # Output: 17 (5 + 10 + 2)
+```
+</div>
+<br>  
+
+**¡Domina `reduce` y lleva tu manipulación de datos a otro nivel!** 🔄🐍
+
+# Módulos en Python: Organiza y Potencia tu Código  
+
+## ¿Qué son y cómo funcionan?  
+Los módulos son archivos `.py` que contienen funciones, variables o clases reutilizables. Permiten dividir proyectos complejos en partes manejables y aprovechar funcionalidades predefinidas.  
+
+---
+
+## Módulos Integrados Más Usados  
+Python incluye módulos listos para usar. Algunos esenciales:  
+- **`random`**: Generación de números aleatorios.  
+- **`sys`**: Acceso a variables del sistema.  
+- **`re`**: Trabajo con expresiones regulares.  
+- **`time`**: Manejo de fechas y horas.  
+- **`collections`**: Estructuras de datos avanzadas.  
+
+---
+
+## Cómo Importar y Usar Módulos  
+### Ejemplo con `random`:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+import random
+
+numero = random.randint(1, 10)
+print(numero)  # Ejemplo: 7
+```
+</div>
+<br>  
+
+---
+
+## Manipulación de Rutas con `sys`  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+import sys
+
+print(sys.path)  # Muestra rutas de búsqueda de módulos
+```
+</div>
+<br>  
+
+---
+
+## Expresiones Regulares con `re`  
+Extracción de números de un texto:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+import re
+
+texto = "Teléfono: 311-1234567"
+numeros = re.findall(r'\d+', texto)
+print(numeros)  # Output: ['311', '1234567']
+```
+</div>
+<br>  
+
+---
+
+## Manejo de Tiempo con `time`  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+import time
+
+print(time.time())          # Tiempo en segundos desde 1970
+print(time.asctime())       # Fecha legible: 'Mon Oct 2 12:00:00 2023'
+```
+</div>
+<br>  
+
+---
+
+## Conteo de Elementos con `collections`  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+from collections import Counter
+
+datos = ['manzana', 'pera', 'manzana', 'uva']
+conteo = Counter(datos)
+print(conteo)  # Output: {'manzana': 2, 'pera': 1, 'uva': 1}
+```
+</div>
+<br>  
+
+---
+
+### 4 Beneficios de Usar Módulos  
+1. **Reutilización**: Evita reinventar la rueda con funcionalidades ya existentes.  
+2. **Organización**: Separa lógica en archivos independientes.  
+3. **Mantenibilidad**: Facilita actualizaciones y corrección de errores.  
+4. **Eficiencia**: Aprovecha código optimizado por la comunidad.  
+
+---
+
+## Próximos Pasos  
+Una vez dominados los módulos integrados, el siguiente nivel es crear **módulos personalizados**. Por ejemplo:  
+- Agrupar funciones de cálculo matemático en `calculos.py`.  
+- Organizar utilidades de formato en `herramientas.py`.  
+
+**Consejo clave**: Usa nombres descriptivos y documenta tus módulos para que otros (o tu yo futuro) entiendan su propósito.  
+ 
+
+**Explora, practica y verás cómo tu código se vuelve más profesional y escalable.** 🚀
+
+---
+
+
+# Cómo Crear Módulos Personalizados en Python
+
+## ¿Por Qué y Cómo Organizar tu Código en Módulos?  
+Dividir tu código en módulos mejora la mantenibilidad y reutilización. Un módulo es simplemente un archivo `.py` con funciones, clases o variables relacionadas. Te mostramos cómo implementarlo:
+
+---
+
+## Creación Básica de un Módulo  
+### 1. Estructura de archivos  
+Crea una carpeta para tu proyecto (ej: `app`) y dentro dos archivos:  
+- `mod.py`: Tu módulo personalizado  
+- `main.py`: Programa principal  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# mod.py
+def get_population():
+    countries = ['Colombia', 'Bolivia']
+    populations = [300, 400]
+    return countries, populations
+```
+</div>
+<br>  
+
+### 2. Uso del Módulo  
+Importa y utiliza las funciones desde tu archivo principal:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# main.py
+import mod
+
+paises, poblaciones = mod.get_population()
+print(f"Países: {paises}\nPoblaciones: {poblaciones}")
+```
+</div>
+<br>  
+
+**Ejecución**:
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```bash
+cd app
+python main.py
+# Output: Países: ['Colombia', 'Bolivia'] Poblaciones: [300, 400]
+```
+
+</div>
+<br>  
+---
+
+## Buenas Prácticas: Nombrado Significativo  
+Usa nombres que describan claramente el contenido del módulo. Por ejemplo:  
+
+- `mod.py` → `datos_demograficos.py`  
+- Actualiza las importaciones en consecuencia:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+import datos_demograficos as dd
+
+resultado = dd.get_population()
+```
+</div>
+<br>  
+
+---
+
+## Funcionalidades Avanzadas en Módulos  
+Agrega lógica compleja manteniendo la organización:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# datos_demograficos.py
+def filtrar_por_pais(datos, pais):
+    return list(filter(lambda item: item['pais'].lower() == pais.lower(), datos))
+```
+</div>
+<br>  
+
+**Uso desde el programa principal**:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+datos = [
+    {'pais': 'México', 'poblacion': 128},
+    {'pais': 'Argentina', 'poblacion': 45}
+]
+
+busqueda = input("Ingrese país: ")
+resultado = dd.filtrar_por_pais(datos, busqueda)
+print(f"Datos encontrados: {resultado}")
+```
+</div>
+<br>  
+
+---
+
+### 4 Ventajas Clave de la Modularización  
+1. **Reutilización de código**: Usa las mismas funciones en múltiples proyectos  
+2. **Mantenimiento sencillo**: Corrige errores en un solo archivo  
+3. **Legibilidad**: Código organizado por funcionalidades  
+4. **Colaboración eficiente**: Diferentes equipos pueden trabajar en módulos separados  
+
+
+**¡Domina esta técnica y lleva tus proyectos al siguiente nivel!** 🚀
+
+---
+
+
+# Ejecución de Módulos en Python: Controla Cuándo y Cómo se Corre tu Código  
+
+## Dos Formas de Ejecutar Módulos  
+1. **Como script directo**: Desde la terminal con `python archivo.py`  
+2. **Como módulo importado**: Usando `import` desde otro archivo  
+
+---
+
+## El Problema de la Ejecución Inesperada  
+Cuando un módulo contiene código fuera de funciones, este se ejecuta automáticamente al importarlo. Ejemplo:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# main.py (sin control de ejecución)
+data = [1, 2, 3]
+print("¡Este mensaje no debería aparecer al importar!")
+usuario = input("Ingresa tu nombre: ")  # Se ejecuta incluso al importar
+```
+</div>
+<br>  
+
+**Al importarlo desde otro archivo**:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# ejemplo.py
+import main  # ¡Ejecuta el input y el print automáticamente!
+```
+</div>
+<br>  
+
+---
+
+## Solución: `if __name__ == "__main__"`  
+Este bloque garantiza que el código solo se ejecute cuando el archivo es el punto de entrada principal.  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# main.py (versión corregida)
+def ejecutar_como_script():
+    print("Modo script activado ✅")
+    usuario = input("Nombre: ")
+    print(f"Hola, {usuario}!")
+
+if __name__ == "__main__":
+    ejecutar_como_script()
+```
+</div>
+<br>  
+
+### ¿Cómo funciona?  
+- **Ejecución directa**: `__name__` es `"__main__"` → Se ejecuta el bloque.  
+- **Como módulo**: `__name__` es el nombre del archivo (ej: `"main"`) → No se ejecuta.  
+
+---
+
+## Recomendaciones Clave  
+1. **Encapsula la lógica principal en funciones**: Facilita el control de ejecución.  
+2. **Prueba ambos modos**: 
+
+   ```bash
+   # Como script
+   python main.py
+
+   # Como módulo (en otro archivo)
+   import main
+   ```  
+
+3. **Evita código global**: Todo lo que no sean definiciones (funciones/clases) debe ir dentro del bloque `if __name__`.  
+
+---
+
+## Ejemplo de Flujo Controlado  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# modulo_util.py
+def sumar(a, b):
+    return a + b
+
+if __name__ == "__main__":
+    # Solo se ejecuta al correr el archivo directamente
+    print("Prueba de la función sumar:", sumar(5, 3))
+```
+</div>
+<br>  
+
+**Resultado al importar**:  
+
+```python
+import modulo_util
+print(modulo_util.sumar(2, 2))  # Output: 4 (sin mensajes extras)
+```
+
+---
+
+**Conclusión**: Domina el uso de `if __name__ == "__main__"` para crear módulos flexibles y evitar comportamientos inesperados. ¡Tu código ganará en profesionalismo y confiabilidad! 🔧🐍

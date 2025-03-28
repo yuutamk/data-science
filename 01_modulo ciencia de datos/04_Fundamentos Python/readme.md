@@ -1739,3 +1739,290 @@ print(modulo_util.sumar(2, 2))  # Output: 4 (sin mensajes extras)
 ---
 
 **Conclusión**: Domina el uso de `if __name__ == "__main__"` para crear módulos flexibles y evitar comportamientos inesperados. ¡Tu código ganará en profesionalismo y confiabilidad! 🔧🐍
+
+---
+
+# Paquetes en Python: Organiza tu Código como un Profesional  
+
+## ¿Qué son y cómo se estructuran?  
+Un paquete es una **carpeta que agrupa módulos relacionados** (archivos `.py`). Facilita la escalabilidad y reutilización de código en proyectos grandes.  
+
+---
+
+## Creación de un Paquete Básico  
+### Estructura de archivos:  
+```
+proyecto/  
+├── main.py  
+└── paquete/  
+    ├── mod1.py  
+    ├── mod2.py  
+    └── __init__.py  # Opcional desde Python 3.3, pero útil
+```  
+
+### Contenido de los módulos: 
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# mod1.py
+def funcion1():
+    return "Función 1 ejecutada"
+
+def funcion2():
+    return "Función 2 ejecutada"
+```
+</div>
+<br>  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# mod2.py
+def funcion3():
+    return "Función 3 ejecutada"
+
+def funcion4():
+    return "Función 4 ejecutada"
+```
+</div>
+<br>  
+
+---
+
+## Importación y Uso desde Código 
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# main.py
+from paquete.mod1 import funcion1, funcion2
+from paquete.mod2 import funcion3, funcion4
+
+print(funcion1())  # Output: Función 1 ejecutada
+print(funcion4())  # Output: Función 4 ejecutada
+```
+</div>
+<br>  
+
+---
+
+## El Archivo `__init__.py`: Propósitos Clave  
+
+Aunque no es obligatorio desde Python 3.3, se usa para:  
+- **Inicialización**: Ejecutar código al importar el paquete.  
+- **Namespaces**: Controlar qué módulos se exponen.  
+
+### Ejemplo de implementación:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# __init__.py
+print("✅ Paquete inicializado")
+url = "https://ejemplo.com"
+
+# Importar módulos al importar el paquete
+from . import mod1, mod2
+```
+</div>
+<br>  
+
+---
+
+## Buenas Prácticas  
+
+1. **Usa `__init__.py` para imports clave**: Simplifica el acceso a funciones comunes.  
+2. **Nombres descriptivos**: Ej: `utils` para utilidades, `models` para clases de datos.  
+3. **Jerarquía clara**: Separa módulos por funcionalidad (ej: `paquete/database/`, `paquete/api/`).  
+4. **Documenta**: Añade comentarios o un `README.md` para explicar la estructura.  
+
+---
+
+## Ejemplo Avanzado: Namespace Controlado 
+
+En `__init__.py`, define qué se exporta: 
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+# __init__.py
+__all__ = ['mod1']  # Solo expone mod1 al usar from paquete import *
+```
+</div>
+<br>  
+
+---
+
+**Conclusión**: Los paquetes son esenciales para proyectos profesionales. Empieza con estructuras simples y evoluciona hacia sistemas modulares. ¡Experimenta creando tus propios paquetes! 🚀
+
+---
+
+# Iterables en Python: Controla el Flujo de tus Datos  
+
+## ¿Qué son los Iterables?  
+Un iterable es un objeto que permite acceder a sus elementos uno por uno. Son la base para trabajar con estructuras como listas, tuplas, cadenas de texto, o incluso archivos.  
+
+---
+
+## Iteradores Manuales: `iter()` y `next()`  
+Un **iterador** es un objeto que controla la progresión de un iterable. Se crea con `iter()` y avanza con `next()`:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+frutas = ("manzana", "pera", "banano")
+mi_iterador = iter(frutas)
+
+print(next(mi_iterador))  # manzana
+print(next(mi_iterador))  # pera
+print(next(mi_iterador))  # banano
+```
+</div>
+<br>  
+
+---
+
+## Manejo de Errores: `StopIteration`  
+Al agotar los elementos, se lanza una excepción. Usa `try/except` para controlarla:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+try:
+    print(next(mi_iterador))  # Intenta acceder a un cuarto elemento
+except StopIteration:
+    print("No hay más elementos.")
+```
+</div>
+<br>  
+
+---
+
+## Iterables en Acción: Ejemplos Prácticos  
+### 1. Iterar cadenas de texto  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+palabra = "manzana"
+mi_iter = iter(palabra)
+
+print(next(mi_iter))  # m
+print(next(mi_iter))  # a
+# ... Continúa hasta agotar caracteres
+```
+</div>
+<br>  
+
+### 2. Bucles `for` simplificados  
+Los bucles usan iteradores internamente:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+autos = ('chevrolet', 'volvo', 'audi')
+for auto in autos:
+    print(auto)
+```
+</div>
+<br>  
+
+---
+
+## Creando Iteradores Personalizados  
+Define clases con los métodos `__iter__()` y `__next__()`:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">
+  <div style="display: flex; gap: 6px; padding: 5px;">
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>
+  </div>
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">
+
+```python
+class MisNumeros:
+    def __iter__(self):
+        self.num = 1
+        return self
+
+    def __next__(self):
+        if self.num <= 5:
+            x = self.num
+            self.num += 1
+            return x
+        else:
+            raise StopIteration
+
+numeros = MisNumeros()
+mi_iter = iter(numeros)
+
+for num in mi_iter:
+    print(num)  # Imprime 1, 2, 3, 4, 5
+```
+</div>
+<br>  
+
+---
+
+## Aplicaciones Prácticas  
+- **Lectura de archivos grandes**: Procesa línea por línea sin cargar todo en memoria.  
+- **Streaming de datos**: Maneja flujos continuos (ej: datos en tiempo real).  
+- **Generadores**: Crea secuencias infinitas (ej: números aleatorios).  
+
+**Consejo clave**: Usa `StopIteration` para controlar cuándo debe terminar la iteración en tus clases personalizadas.  
+
+--- 
+
+**Domina los iterables y lleva tu manejo de datos al siguiente nivel.** 🚀

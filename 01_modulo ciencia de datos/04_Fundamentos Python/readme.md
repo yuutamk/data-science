@@ -2023,6 +2023,359 @@ for num in mi_iter:
 
 **Consejo clave**: Usa `StopIteration` para controlar cuándo debe terminar la iteración en tus clases personalizadas.  
 
---- 
 
 **Domina los iterables y lleva tu manejo de datos al siguiente nivel.** 🚀
+
+---
+
+# 📂 Domina la Lectura de Archivos en Python: Técnicas Eficientes  
+
+Manipular archivos de texto es una habilidad esencial para procesar datos, analizar registros o trabajar con configuraciones. Aquí te enseñamos cómo hacerlo de forma segura y eficiente.  
+
+---
+
+## 🔍 Crear y Leer un Archivo Básico  
+### Paso 1: Preparar el archivo `text.txt`  
+Crea un archivo con este contenido:  
+```  
+línea 1  
+línea 2  
+línea número 3  
+```  
+
+### Paso 2: Leer el Contenido Completo  
+Ideal para archivos pequeños. Carga todo en memoria:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+archivo = open("text.txt", "r")  
+contenido = archivo.read()  
+print(contenido)  
+archivo.close()  
+```  
+</div>  
+<br>  
+
+---
+
+## 🧩 Lectura Línea por Línea  
+### Opción 1: Usando `readline()`  
+Perfecto para control manual en archivos grandes:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+archivo = open("text.txt", "r")  
+linea = archivo.readline()  
+while linea:  
+    print(linea, end="")  # Evita saltos de línea extra  
+    linea = archivo.readline()  
+archivo.close()  
+```  
+</div>  
+<br>  
+
+---
+
+**Nota:**
+
+> También es recomendable usar esta estructura para que no aparezcan símbolos raros encaso de que se sean archivos binarios. 'r' = para leer el archivo 'encoding="UTF-8' = convierte todo en letras
+
+```python
+ with open("./archivos/numbers.txt", "r", encoding="UTF-8") as f:
+```
+
+### Opción 2: Bucle `for` Automático  
+Más limpio y con gestión automática de recursos:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+with open("text.txt", "r") as archivo:  
+    for linea in archivo:  
+        print(linea, end="")  
+```  
+</div>  
+<br>  
+
+---
+
+## 🔒 Manejo Seguro de Archivos  
+### ¿Por qué cerrar los archivos?  
+- **Libera memoria**: Evita fugas de recursos.  
+- **Previene corrupción**: Garantiza que los datos se guarden correctamente.  
+
+### Método Recomendado: `with open`  
+Cierra el archivo automáticamente, incluso si hay errores:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+with open("text.txt", "r") as archivo:  
+    contenido = archivo.read()  
+    # ¡No necesitas archivo.close()!  
+```  
+
+</div>  
+<br>  
+
+---
+
+## ⚡ Rendimiento: Elige la Técnica Correcta  
+| Método          | Mejor Para          | Uso de Memoria |  
+|-----------------|---------------------|----------------|  
+| `read()`        | Archivos pequeños   | Alto           |  
+| `readline()`    | Archivos grandes    | Bajo           |  
+| Bucle `for`     | Cualquier tamaño    | Bajo           |  
+
+---
+
+## 🚀 Tu Turno de Practicar  
+- Experimenta con archivos de diferentes tamaños.  
+- Combina estas técnicas con manipulación de datos (ej: extraer números o filtrar líneas).  
+- Explora la escritura de archivos para guardar resultados.  
+
+```python  
+# Desafío: Lee un archivo y cuenta sus líneas  
+with open("text.txt", "r") as f:  
+    total_lineas = sum(1 for linea in f)  
+print(f"Total de líneas: {total_lineas}")  
+```  
+
+**¡Convierte archivos en aliados para tus proyectos!** 🐍💡
+
+
+---
+
+# ✍️ Escritura de Archivos en Python: Domina la Manipulación de Textos  
+
+Gestionar archivos es esencial para guardar datos, generar reportes o crear configuraciones. Aquí aprenderás a escribir en archivos de texto con Python de forma segura y eficiente.  
+
+---
+
+## 🚀 **Primeros Pasos: Abrir y Crear Archivos**  
+### Modos de Apertura Clave  
+| Modo | Descripción |  
+|------|-------------|  
+| `r`  | Solo lectura |  
+| `w`  | Escritura (sobrescribe el archivo si existe) |  
+| `r+` | Lectura y escritura (sin borrar contenido) |  
+| `w+` | Lectura y escritura (borra contenido existente) |  
+
+**Ejemplo de apertura**:  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+# Abre el archivo en modo lectura/escritura  
+archivo = open('datos.txt', 'r+')  
+```  
+</div>  
+<br>  
+
+---
+
+## 📝 **Escribir Contenido: Técnicas Básicas**  
+### 1. Sobrescribir un archivo (`w`):  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+with open('registro.txt', 'w') as f:  
+    f.write("Línea 1\n")  
+    f.write("Línea 2\n")  
+```  
+</div>  
+<br>  
+
+### 2. Añadir contenido sin borrar (`a`):  
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+with open('registro.txt', 'a') as f:  
+    f.write("Nueva línea añadida al final\n")  
+```  
+
+</div>  
+<br>  
+
+---
+
+## 🛠️ **Errores Comunes y Soluciones**  
+### Problema: Permisos Incorrectos  
+Si abres un archivo en modo `r` (solo lectura) e intentas escribir, obtendrás un error:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+archivo = open('datos.txt', 'r')  
+archivo.write("¡Error!")  # Genera: io.UnsupportedOperation  
+```  
+
+</div>  
+<br>  
+
+**Solución**: Usa `w`, `a`, `r+` o `w+` según necesites.  
+
+---
+
+## 🔒 **Cierre Seguro de Archivos**  
+### Método Tradicional (riesgoso): 
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+archivo = open('texto.txt', 'w')  
+archivo.write("Hola")  
+archivo.close()  # ¡No olvides cerrarlo!  
+```  
+</div>  
+<br>  
+
+### Método Recomendado (`with`):  
+Cierra el archivo automáticamente, incluso si hay errores:  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+with open('texto.txt', 'w') as archivo:  
+    archivo.write("Texto seguro ✅")  
+```  
+</div>  
+<br>  
+
+---
+
+## 💡 **Consejos Profesionales**  
+1. **Saltos de línea**: Usa `\n` para crear nuevas líneas.  
+2. **Modo `a` (append)**: Ideal para añadir datos sin borrar el historial (ej: logs).  
+3. **Codificación**: Especifica el encoding si trabajas con caracteres especiales:  
+   
+    <div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+        <div style="display: flex; gap: 6px; padding: 5px;">  
+            <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+            <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+            <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+        </div>  
+    <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+    ```python  
+    with open('archivo.txt', 'w', encoding='utf-8') as f:  
+        f.write("Acentos: áéíóúñ")  
+    ```  
+    
+    </div>  
+    <br>  
+
+---
+
+## 🚧 **Ejemplo Completo: Escritura y Lectura** 
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+# Paso 1: Escribir  
+with open('ejemplo.txt', 'w') as f:  
+    f.write("Python es poderoso\n")  
+    f.write("¡Aprende a usarlo!\n")  
+
+# Paso 2: Leer  
+with open('ejemplo.txt', 'r') as f:  
+    print(f.read())  
+
+# Output:  
+# Python es poderoso  
+# ¡Aprende a usarlo!  
+```  
+</div>  
+<br>  
+
+---
+
+**Desafío**: Crea un script que:  
+1. Pida al usuario su nombre y edad.  
+2. Guarde los datos en un archivo `usuarios.txt`.  
+3. Añada nuevos usuarios sin borrar los anteriores.  
+
+<div style="background: #1E1E1E; padding: 10px; border-radius: 8px; width: fit-content; font-family: monospace; color: white;">  
+  <div style="display: flex; gap: 6px; padding: 5px;">  
+    <span style="width: 12px; height: 12px; background: #FF5F57; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #FFBD2E; border-radius: 50%; display: inline-block;"></span>  
+    <span style="width: 12px; height: 12px; background: #27C93F; border-radius: 50%; display: inline-block;"></span>  
+  </div>  
+  <hr style="border: 1px solid black; background: none; margin:0; padding:0;  height: 0px; ">  
+
+```python  
+nombre = input("Nombre: ")  
+edad = input("Edad: ")  
+
+with open('usuarios.txt', 'a') as f:  
+    f.write(f"{nombre}, {edad}\n")  
+```  
+</div>  
+<br>
+
+**¡Domina la escritura de archivos y lleva tus proyectos al siguiente nivel!** 🐍🚀

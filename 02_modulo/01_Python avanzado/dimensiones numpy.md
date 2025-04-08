@@ -1,5 +1,5 @@
 
-### **Manejo de dimensiones en NumPy**  
+# **Manejo de dimensiones en NumPy**  
 Las dimensiones en NumPy son fundamentales para trabajar con datos estructurados. Permiten abordar problemas complejos en ciencia de datos mediante operaciones eficientes. A continuación, se explican los conceptos clave:
 
 ---

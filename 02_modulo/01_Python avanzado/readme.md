@@ -67,8 +67,7 @@ import matplotlib.pyplot as plt
 # **Manejo de dimensiones en NumPy**  
 Las dimensiones en NumPy son fundamentales para trabajar con datos estructurados. Permiten abordar problemas complejos en ciencia de datos mediante operaciones eficientes. A continuación, se explican los conceptos clave:
 
----
-
+![dimensiones](../../assets/img/png/scalar-matrix-matrix.png)
 #### **Escalar: Dimensión cero**  
 Un escalar es un valor único sin ejes. Por ejemplo, la temperatura de un día específico:  
 
